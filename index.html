@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IFlow Group</title>
+    <!-- seo -->
+    <meta name="description" 
+        content="
+            Transforme a gestão da sua agência de fretamento e turismo. Gerencie frotas, reservas, cotações e finanças em uma única plataforma."/>
+    <meta property="og:title" content="IFlow Group | Gestão de Fretamento" />
+    <meta property="og:description" content="Gerencie reservas, cotações e finanças em uma única plataforma intuitiva e poderosa." />
+    <meta property="og:image" content="./assets/images/logo.png" />
+    <meta property="og:type" content="website" />
+    
+    <title>IFlow Group | Sistema para Agências de Fretamento e Turismo</title>
+    
     <link
       rel="icon"
       type="image/png"
@@ -26,8 +36,7 @@
       <div class="container">
         <div class="wrapper">
             <div class="title">
-                <!-- <img class="logo-title" src="assets/images/logo.svg" alt="Logo da Empresa"> -->
-                <h1>IFlow</h1>
+                <span>IFlow</span>
             </div>
 
             <nav class="nav-bar">
@@ -35,6 +44,7 @@
             <a href="#produto" class="nav-link">Produto</a>
             <a href="#planos" class="nav-link">Planos</a>
             <a href="#quem-somos" class="nav-link">Quem somos</a>
+            <a href="#faq" class="nav-link">FAQ</a>
             <a href="#contato" class="nav-link">Contato</a>
             </nav>
         </div>
@@ -43,11 +53,11 @@
 
     <!-- inicio com titulo etc -->
     <main>
-      <section class="home">
+      <section class="home" id="home">
         <div class="container">
             <div class="home-content">
                 <h1 class="home-title">
-                    Transforme sua Âgencia com Tecnologia de Ponta
+                    Transforme sua Agência com Tecnologia de Ponta
                 </h1>
                 <p class="home-subtitle">
                     Gerencie reservas, cotações e finanças em uma única plataforma
@@ -63,7 +73,7 @@
       </section>
 
       <!-- sobre o produto -->
-      <section class="produto">
+      <section class="produto" id="produto">
         <div class="container">
           <h2 class="produto-title">Sobre o Produto</h2>
           <p class="produto-subtitle">
@@ -71,7 +81,7 @@
             fretamento de turismo
           </p>
 
-          <div class="produto-grid">
+        <div class="produto-grid">
 
             <div class="produto-cards">
               <div class="produto-icone">
@@ -82,6 +92,7 @@
                 Controle completo dos veículos disponíveis, manutenções
                 programadas e disponibilidade em tempo real
               </p>
+              </div>
             
               <div class="produto-cards">
               <div class="produto-icone">
@@ -91,6 +102,7 @@
               <p>
                 Gere cotações precisas instantaneamente considerando distância, combustível, pedágios e custos operacionais
               </p>
+              </div>
 
               <div class="produto-cards">
               <div class="produto-icone">
@@ -100,6 +112,7 @@
               <p>
                 Controle total de receitas, despesas, fluxo de caixa e relatórios financeiros detalhados
               </p>
+              </div>
 
               <div class="produto-cards">
               <div class="produto-icone">
@@ -109,6 +122,7 @@
               <p>
                 Calendário integrado com visualização de todas as viagens, evitando conflitos e otimizando a operação
               </p>
+              </div>
 
               <div class="produto-cards">
               <div class="produto-icone">
@@ -118,6 +132,7 @@
               <p>
                 Histórico completo de clientes, preferências e integração com ferramentas de marketing
               </p>
+              </div>
 
               <div class="produto-cards">
               <div class="produto-icone">
@@ -127,27 +142,27 @@
               <p>
                 Gerencie seu negócio de qualquer lugar através de dispositivos móveis com sincronização em tempo real
               </p>
-
             </div>
           </div>
-        </div>
       </section>
 
       <!--joao-->
-      <section class="planos"></section>
+      <section class="planos" id="planos"></section>
       
       <!-- gustavo -->
-      <section class="quem-somos"></section>
+      <section class="quem-somos" id="quem-somos"></section>
       
       <!-- gustavo -->
-      <section class="faq"></section>
+      <section class="faq" id="faq"></section>
       
       <!--joao-->
-      <section class="contato"></section>
+      <section class="contato" id="contato"></section>
       
     </main>
 
-    <footer></footer>
+    <footer>
+        <img class="logo" src="assets/images/logo.svg" alt="Logo do sistema IFlow Group">
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>

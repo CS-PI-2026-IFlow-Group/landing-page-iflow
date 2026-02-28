@@ -45,15 +45,10 @@ header {
     gap: 15px;
 }
 
-.title h1 {
-    font-size: 1.8rem;
+.title span {
+    font-size: 1.5rem;
     font-weight: 700;
 }
-
-/* .logo-title {
-    width: 60px;
-    height: auto;
-}  */
 
 .nav-bar {
     display: flex;
@@ -81,6 +76,12 @@ header {
     color: var(--white);
     padding: 100px 0;
     text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 35rem;
 }
 
 .home-content {
@@ -146,3 +147,75 @@ header {
     transform: translateY(-2px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+
+section {
+    padding: 88px 0;
+    scroll-margin-top: 65px
+}
+
+.produto-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.produto-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--cor-subtitulos);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.produto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.produto-cards {
+    background-color: var(--background-padrao);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.produto-cards img, h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.produto-cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.produto-icone {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+    width: 50px;
+}
+
+.produto-cards h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.produto-cards p{
+    color: var(--cor-subtitulos);
+    line-height: 1.8;
+}
+
+/* footer */
+.logo {
+    height: 45px;
+    bottom: 15px;
+} 
