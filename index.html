@@ -1,76 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IFlow Group</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/logo.png"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
-</head>
 
-<body>
-    
-    <!-- Ana -->
-     <header>
-        <nav>
-            <span>IFlow</span>
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-            <ul>
-                <li>Produto</li>
-                <li>Planos</li>
-                <li>Quem somos</li>
-                <li>Contato</li>
-            </ul>
-        </nav>
+  </head>
+
+  <body>
+    <!-- ana -->
+    <!-- header e nav-bar -->
+    <header class="header">
+      <div class="container">
+        <div class="wrapper">
+            <div class="title">
+                <!-- <img class="logo-title" src="assets/images/logo.svg" alt="Logo da Empresa"> -->
+                <h1>IFlow</h1>
+            </div>
+
+            <nav class="nav-bar">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#produto" class="nav-link">Produto</a>
+            <a href="#planos" class="nav-link">Planos</a>
+            <a href="#quem-somos" class="nav-link">Quem somos</a>
+            <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+        </div>
+      </div>
     </header>
 
+    <!-- inicio com titulo etc -->
     <main>
-        <section class="home">
-            <h1>Transforme sua Âgencia com Tecnologia de Ponta</h1>
-            <p>
-                Gerencie reservas, cotações e finanças em uma única plataforma intuitiva e poderosa
-            </p>
+      <section class="home">
+        <div class="container">
+            <div class="home-content">
+                <h1 class="home-title">
+                    Transforme sua Âgencia com Tecnologia de Ponta
+                </h1>
+                <p class="home-subtitle">
+                    Gerencie reservas, cotações e finanças em uma única plataforma
+                    intuitiva e poderosa
+                </p>
 
-            <button type="">Solicitar Demo</button>
+                <div class="home-buttons">
+                    <a href="#produto" class="btn primeiro-btn">Ver Planos</a>
+                    <a href="#contato" class="btn segundo-btn">Solicitar Demo</a>
+                </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- sobre o produto -->
+      <section class="produto">
+        <div class="container">
+          <h2 class="produto-title">Sobre o Produto</h2>
+          <p class="produto-subtitle">
+            Uma solução completa que simplifica a gestão da sua agência de
+            fretamento de turismo
+          </p>
+
+          <div class="produto-grid">
+
+            <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/images/bus-solid-full-blue.svg" alt="Ônibus" />
+              </div>
+              <h3>Gestão de Frota</h3>
+              <p>
+                Controle completo dos veículos disponíveis, manutenções
+                programadas e disponibilidade em tempo real
+              </p>
             
-            <button type="">Ver Planos</button>
-        </section>
-        <section class="produto">
-            <h1 class="titulo-prod">
-                Sobre o Produto
-            </h1>
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/images/money-bill-solid-full-blue.svg" alt="Dinheiro" />
+              </div>
+              <h3>Cotações Automáticas</h3>
+              <p>
+                Gere cotações precisas instantaneamente considerando distância, combustível, pedágios e custos operacionais
+              </p>
 
-            <p>
-                Uma solução completa que simplifica a gestão da sua agência de fretamento de turismo
-            </p>
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/images/chart-area-solid-full-blue.svg" alt="Gráfico" />
+              </div>
+              <h3>Gestão Financeira</h3>
+              <p>
+                Controle total de receitas, despesas, fluxo de caixa e relatórios financeiros detalhados
+              </p>
 
-            <div>
-                <ul>
-                    <li>Gestão de Frota</li>
-                    <li>Cotação</li>
-                    <li>Gestão Financeira</li>
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/images/calendar-solid-full-blue.svg" alt="Calendário" />
+              </div>
+              <h3>Agendamento Inteligente</h3>
+              <p>
+                Calendário integrado com visualização de todas as viagens, evitando conflitos e otimizando a operação
+              </p>
 
-                    <li>Agendamento Inteligente</li>
-                    <li>Gestão de clientes</li>
-                    <li>Acesso Mobile</li>
-                </ul>
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/images/circle-user-solid-full-blue.svg" alt="Usuário" />
+              </div>
+              <h3>Gestão de clientes</h3>
+              <p>
+                Histórico completo de clientes, preferências e integração com ferramentas de marketing
+              </p>
+
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/images/mobile-solid-full-blue.svg" alt="Celular" />
+              </div>
+              <h3>Acesso Mobile</h3>
+              <p>
+                Gerencie seu negócio de qualquer lugar através de dispositivos móveis com sincronização em tempo real
+              </p>
+
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-
-        <section class="planos"></section> <!--joao-->
-
-        <section class="quem-somos"></section> <!-- gustavo -->
-
-        
-        <section class="faq"></section> <!-- gustavo -->
-
-        <section class="contato"></section> <!--joao-->
+      <!--joao-->
+      <section class="planos"></section>
+      
+      <!-- gustavo -->
+      <section class="quem-somos"></section>
+      
+      <!-- gustavo -->
+      <section class="faq"></section>
+      
+      <!--joao-->
+      <section class="contato"></section>
+      
     </main>
 
-      <footer></footer>
+    <footer></footer>
     <script src="./js/main.js"></script>
-</body>
-
+  </body>
 </html>
