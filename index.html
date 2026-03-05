@@ -1,16 +1,184 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IFlow Group</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.png">
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-</head>
+    <!-- seo -->
+    <meta name="description" 
+        content="
+            Transforme a gestão da sua agência de fretamento e turismo. Gerencie frotas, reservas, cotações e finanças em uma única plataforma."/>
+    <meta property="og:title" content="IFlow Group | Gestão de Fretamento" />
+    <meta property="og:description" content="Gerencie reservas, cotações e finanças em uma única plataforma intuitiva e poderosa." />
+    <meta property="og:image" content="./assets/images/logo.png" />
+    <meta property="og:type" content="website" />
+    
+    <title>IFlow Group | Sistema para Agências de Fretamento e Turismo</title>
+    
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/logo.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
 
-<body>
-    <script src="./assets/js/main.js"></script>
-</body>
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+  </head>
+
+  <body>
+    <!-- ana -->
+    <div class="overlay" id="overlay"></div>
+    <!-- header e nav-bar -->
+    <header class="header">
+      <div class="container">
+        <div class="wrapper">
+            <div class="title">
+                <img src="assets/svg/logo-if.svg" alt="Logo do sistema IFlow Group">
+            </div>
+
+            <button class="menu-toggle" aria-label="Abrir menu">
+              <span class="menu"></span>
+            </button>
+
+            <nav class="nav-bar">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#produto" class="nav-link">Produto</a>
+            <a href="#planos" class="nav-link">Planos</a>
+            <a href="#quem-somos" class="nav-link">Quem somos</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#contato" class="nav-link">Contato</a>
+
+            </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- inicio com titulo etc -->
+    <main>
+      <section class="home" id="home">
+        <div class="container">
+            <div class="home-content">
+                <h1 class="home-title">
+                    Transforme sua Agência com Tecnologia de Ponta
+                </h1>
+                <p class="home-subtitle">
+                    Gerencie reservas, cotações e finanças em uma única plataforma
+                    intuitiva e poderosa
+                </p>
+
+                <div class="home-buttons">
+                    <a href="#planos" class="btn primeiro-btn">Ver Planos</a>
+                    <a href="#contato" class="btn segundo-btn">Solicitar Demo</a>
+                </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- sobre o produto -->
+      <section class="produto" id="produto">
+        <div class="container">
+          <h2 class="produto-title">Sobre o Produto</h2>
+          <p class="produto-subtitle">
+            Uma solução completa que simplifica a gestão da sua agência de
+            fretamento de turismo
+          </p>
+
+        <div class="produto-grid">
+
+            <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/svg/bus-solid-full-blue.svg" alt="Ônibus" />
+              </div>
+              <h3>Gestão de Frota</h3>
+              <p>
+                Controle completo dos veículos disponíveis, manutenções
+                programadas e disponibilidade em tempo real
+              </p>
+              </div>
+            
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/svg/money-bill-solid-full-blue.svg" alt="Dinheiro" />
+              </div>
+              <h3>Cotações Automáticas</h3>
+              <p>
+                Gere cotações precisas instantaneamente considerando distância, combustível, pedágios e custos operacionais
+              </p>
+              </div>
+
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/svg/chart-area-solid-full-blue.svg" alt="Gráfico" />
+              </div>
+              <h3>Gestão Financeira</h3>
+              <p>
+                Controle total de receitas, despesas, fluxo de caixa e relatórios financeiros detalhados
+              </p>
+              </div>
+
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/svg/calendar-solid-full-blue.svg" alt="Calendário" />
+              </div>
+              <h3>Agendamento Inteligente</h3>
+              <p>
+                Calendário integrado com visualização de todas as viagens, evitando conflitos e otimizando a operação
+              </p>
+              </div>
+
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/svg/circle-user-solid-full-blue.svg" alt="Usuário" />
+              </div>
+              <h3>Gestão de clientes</h3>
+              <p>
+                Histórico completo de clientes, preferências e integração com ferramentas de marketing
+              </p>
+              </div>
+
+              <div class="produto-cards">
+              <div class="produto-icone">
+                <img src="assets/svg/mobile-solid-full-blue.svg" alt="Celular" />
+              </div>
+              <h3>Acesso Mobile</h3>
+              <p>
+                Gerencie seu negócio de qualquer lugar através de dispositivos móveis com sincronização em tempo real
+              </p>
+            </div>
+          </div>
+          
+          <!-- colocar depois -->
+          <!-- <div class="imgs-produto"></div> -->
+
+      </section>
+
+      <!--joao-->
+      <section class="planos" id="planos"></section>
+      
+      <!-- gustavo -->
+      <section class="quem-somos" id="quem-somos"></section>
+      
+      <!-- gustavo -->
+      <section class="faq" id="faq"></section>
+      
+      <!--joao-->
+      <section class="contato" id="contato"></section>
+      
+    </main>
+
+    <footer>
+    </footer>
+    <div class="acessibilidade">
+              <button id="diminuir-fonte" title="Diminuir fonte">A-</button>
+              <button id="aumentar-fonte" title="Aumentar fonte">A+</button>
+              <button id="alto-contraste" title="Alternar para Alto Constraste">
+                <img src="assets/images/arrows-to-eye-solid.png" alt="Flechas apontando para o olho">
+              </button>
+            </div>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

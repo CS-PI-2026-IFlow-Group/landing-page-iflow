@@ -1,0 +1,10 @@
+:root{
+    --background-padrao: #ebebeb;
+    --cor-primaria: #093F59;
+    --cor-secundaria: #8582A9;
+    --white: #FFFFFF;
+    --transition: all 0.3s ease;
+    --cor-titulos: #093F59;
+    --cor-subtitulos: #5a5a5a;
+    --fonte-padrao: 'Roboto', sans-serif;
+}
