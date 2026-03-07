@@ -2,6 +2,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navBar = document.querySelector(".nav-bar");
 const overlay = document.querySelector(".overlay");
 
+
 function toggleMenu() {
   menuToggle.classList.toggle("active");
   navBar.classList.toggle("active");
@@ -45,4 +46,28 @@ window.addEventListener("DOMContentLoaded", () => {
   if (contrastSaved === "true") {
     document.body.classList.add("alto-contraste");
   }
+});
+
+
+
+
+const faq = document.getElementById("faq-container");
+
+fetch("json/faq.json")
+    .then(resposta => resposta.json())
+    .then(faqLista =>{
+        faqLista.forEach(item =>{
+            const details = document.createElement("details");
+            const summary = document.createElement("summary");
+            const p = document.createElement("p");
+
+            summary.textContent = item.pergunta;
+            p.textContent = item.resposta;
+
+            details.append(summary);
+            details.append(p);
+
+            faq.append(details);
+    });
+
 });
