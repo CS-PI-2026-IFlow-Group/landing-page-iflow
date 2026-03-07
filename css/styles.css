@@ -498,28 +498,32 @@ body.alto-contraste .acessibilidade button img{
     list-style: none;
     text-align: center;
     position: relative;
-
+    font-weight:bold;
+    color: var(--cor-primaria);
 }
 
 #faq-container summary::-webkit-details-marker{
     display: none;
 }
 
-#faq-container summary::after{
-    content: "⌄";
+details[open] summary .caret-faq-icon{
+    transform: rotate(180deg)
+
+}
+
+.caret-faq-icon{
     position:absolute;
-    right: 15px;
-    transition: transform 0.3s ease;
-
+    right: 30px;
+    top: 20px;
 }
 
 
-#faq-container details[open] summary::after{
-    transform: rotate(180deg);
-}
 
 #faq-container p{
     text-align: center;
+    color: var(--cor-primaria);
+       padding-bottom: 10px;
+
 }
 
 #faq h2{
@@ -534,15 +538,18 @@ body.alto-contraste .acessibilidade button img{
 .faq-icon{
     font-size: 1rem;
     width: 50px;
-
-
 }
+
 
 .faq-cabeçalho{
         display: flex;
         align-items: center;
         flex-direction: column;
         gap: 0px;
+}
+
+.negrito{
+    font-weight: bold;
 }
 
 

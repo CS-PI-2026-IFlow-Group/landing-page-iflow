@@ -60,8 +60,14 @@ fetch("json/faq.json")
             const details = document.createElement("details");
             const summary = document.createElement("summary");
             const p = document.createElement("p");
+            const img = document.createElement("img");
+            img.src = "assets/svg/caret-faq.svg"
+            img.alt = "seta para abrir pergunta"
+            img.classList.add("caret-faq-icon");
+
 
             summary.textContent = item.pergunta;
+            summary.append(img);
             p.textContent = item.resposta;
 
             details.append(summary);
@@ -69,5 +75,8 @@ fetch("json/faq.json")
 
             faq.append(details);
     });
+
+
+
 
 });
