@@ -480,3 +480,44 @@ body.alto-contraste .acessibilidade button img{
         text-align: center;
     }
 }
+/* footer*/
+
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid var(--cor-secundaria);
+  background-color: var(--cor-primaria);
+}
+
+.footer-tech-title {
+  margin-bottom: 20px;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-tech-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.tech-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.tech-item:focus {
+  outline: 1px solid var(--white);
+  border-radius: 6px;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  color: var(--white);
+
+}
