@@ -77,6 +77,24 @@ fetch("json/faq.json")
     });
 
 
+const todasTagsDetails = document.querySelectorAll("details");
 
+todasTagsDetails.forEach((details)=>{
+    details.addEventListener("toggle", () => {
+    if(details.open){
+        todasTagsDetails.forEach((outro)=>{
+
+            if(details !== outro){
+                   outro.removeAttribute("open");
+            }
+        }
+        )
+    }
+
+
+})
+
+
+});
 
 });
