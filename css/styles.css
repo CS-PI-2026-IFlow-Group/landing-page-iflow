@@ -493,13 +493,18 @@ body.alto-contraste .acessibilidade button img{
 }
 
 
-#faq-container summary{
-    height: 60px;
-    list-style: none;
-    text-align: center;
-    position: relative;
-    font-weight:bold;
-    color: var(--cor-primaria);
+#faq-container summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  cursor: pointer;
+  min-height: 60px;
+  padding: 15px 20px;
+  list-style: none;
+  text-align: center;
 }
 
 #faq-container {
@@ -526,8 +531,16 @@ details[open] summary .caret-faq-icon{
 #faq-container p{
     text-align: center;
     color: var(--cor-primaria);
-       padding-bottom: 10px;
+    padding: 15px;
 
+}
+
+#faq-container summary img {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  transition: transform 0.3s;
 }
 
 #faq h2{
@@ -545,7 +558,7 @@ details[open] summary .caret-faq-icon{
 }
 
 
-.faq-cabeçalho{
+.faq-cabecalho{
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -557,3 +570,15 @@ details[open] summary .caret-faq-icon{
 }
 
 
+  details {
+    overflow: hidden;
+    transition: max-height 1.0s ease-out;
+  }
+
+  details:not([open]) {
+    max-height: 70px;
+  }
+
+  details[open] {
+    max-height: 500px;
+  }
