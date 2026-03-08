@@ -485,10 +485,12 @@ body.alto-contraste .acessibilidade button img{
 
 
 #faq-container details{
-    border-radius: 20;
+    border-radius: 20px;
     margin: 20px;
+    width: auto;
+    overflow: hidden;
     box-shadow: 0 2px 5px #093F59;;
-   border-radius: var(--borda-redonda);
+    border-radius: var(--borda-redonda);
 
 }
 
@@ -496,15 +498,16 @@ body.alto-contraste .acessibilidade button img{
 #faq-container summary {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
+  gap: 15px;
   font-weight: bold;
   color: var(--cor-primaria);
   cursor: pointer;
   min-height: 60px;
   padding: 15px 20px;
   list-style: none;
-  text-align: center;
+  text-align: left;
+  height: auto;
 }
 
 #faq-container {
@@ -521,7 +524,9 @@ details[open] summary .caret-faq-icon{
 }
 
 .caret-faq-icon{
-    position:absolute;
+    position:static;
+    flex-shrink: 0;
+    transition: transform 0.3s;
     right: 30px;
     top: 20px;
 }
@@ -578,6 +583,7 @@ details[open] summary .caret-faq-icon{
   details:not([open]) {
     max-height: 70px;
   }
+
 
   details[open] {
     max-height: 500px;
