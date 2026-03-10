@@ -83,6 +83,12 @@ modal.addEventListener("click", function (e) {
   if (e.target === modal) closeImageModal();
 });
 
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && modal.classList.contains("show")) {
+    closeImageModal();
+  }
+});
+
 let currentIndex = 0;
 let autoPlayInterval;
 const delay = 4000;
