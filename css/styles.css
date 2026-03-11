@@ -662,8 +662,16 @@ body.alto-contraste .acessibilidade button img{
 }
 
 #faq-container {
+    padding: 0 20px;
     transition: max-width 0.4s ease;
 }
+
+@media (min-width: 1024px){
+    #faq-container{
+        padding: 0 157px;
+    }
+}
+
 
 #faq-container summary::-webkit-details-marker{
     display: none;
@@ -732,10 +740,10 @@ details[open] summary .caret-faq-icon{
   }
 
   details:not([open]) {
-    max-height: 150px;
+    max-height: 170px;
   }
 
 
   details[open] {
-    max-height: 300px;
+    max-height: 3000px;
   }
