@@ -195,4 +195,8 @@ todasTagsDetails.forEach((details)=>{
 
 });
 
+
+
+const quemSomos = document.getElementById();
+
 });

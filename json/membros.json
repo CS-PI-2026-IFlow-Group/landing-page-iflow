@@ -3,7 +3,7 @@
 
     "nome": "Gustavo Randi",
     "cargo": "Dev",
-    "foto": "assets/imagens/svg",
+    "foto": "assets/imagens/",
     "descricao": "descrica"
 
   },
@@ -11,7 +11,7 @@
 
     "nome": "Ana Beatriz",
     "cargo": "Dev",
-    "foto": "assets/imagens/svg",
+    "foto": "assets/imagens/",
     "descricao": "descrica"
 
   },
@@ -27,7 +27,7 @@
 
     "nome": "Giovana Lopes",
     "cargo": "Dev",
-    "foto": "assets/imagens/svg",
+    "foto": "assets/imagens/",
     "descricao": "descrica"
 
   },
@@ -35,7 +35,7 @@
 
     "nome": "Brayan Matheus",
     "cargo": "Project Owner",
-    "foto": "assets/imagens/svg",
+    "foto": "assets/imagens/",
     "descricao": "descrica"
 
   },
@@ -43,7 +43,7 @@
 
     "nome": "Eliandro",
     "cargo": "Scrum master",
-    "foto": "assets/imagens/svg",
+    "foto": "assets/imagens/",
     "descricao": "descrica"
 
   }

@@ -748,10 +748,27 @@ details[open] summary .caret-faq-icon{
     color: var(--cor-primaria);
   }
 
+ .quem-somos-cabecalho p{
+      font-weight: bold;
+      margin: 20px 30px;
+      padding: 15px;
+
+ }
+
+ @media(min-width: 1024px){
+    .quem-somos-cabecalho p{
+        margin: 20px 200px;
+
+    }
+
+ }
+
+
 
 
 .quem-somos-logo{
     height: 60px;
     width: 60px;
+
 
 }
