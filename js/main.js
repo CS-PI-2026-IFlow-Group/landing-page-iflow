@@ -197,6 +197,43 @@ todasTagsDetails.forEach((details)=>{
 
 
 
-const quemSomos = document.getElementById();
+
+
 
 });
+
+const quemSomos = document.querySelector(".container-membros");
+
+fetch("json/membros.json")
+    .then(resposta => resposta.json())
+    .then(membrosLista => {
+        membrosLista.forEach(item => {
+        const nomeMembro = document.createElement("h1");
+        const cargo = document.createElement("p");
+        const descricaoCargo = document.createElement("h3");
+        const foto = document.createElement("img");
+
+        foto.src = item.foto;
+        foto.alt = item.descricaoFoto;
+        foto.classList.add("foto-membro");
+
+        nomeMembro.textContent = item.nome;
+        cargo.textContent = item.cargo;
+        descricaoCargo.textContent = item.descricaoCargo;
+
+        quemSomos.appendChild(nomeMembro);
+        quemSomos.appendChild(cargo);
+        quemSomos.appendChild(descricaoCargo);
+        quemSomos.appendChild(foto);
+
+
+
+
+
+
+        })
+
+
+
+
+    })
