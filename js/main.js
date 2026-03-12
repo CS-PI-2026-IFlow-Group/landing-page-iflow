@@ -212,6 +212,9 @@ fetch("json/membros.json")
         const cargo = document.createElement("p");
         const descricaoCargo = document.createElement("h3");
         const foto = document.createElement("img");
+        const membroUnico = document.createElement("div");
+
+        membroUnico.classList.add("membro-unico-container");
 
         foto.src = item.foto;
         foto.alt = item.descricaoFoto;
@@ -221,14 +224,12 @@ fetch("json/membros.json")
         cargo.textContent = item.cargo;
         descricaoCargo.textContent = item.descricaoCargo;
 
-        quemSomos.appendChild(nomeMembro);
-        quemSomos.appendChild(cargo);
-        quemSomos.appendChild(descricaoCargo);
-        quemSomos.appendChild(foto);
+        membroUnico.appendChild(foto);
+        membroUnico.appendChild(nomeMembro);
+        membroUnico.appendChild(cargo);
+        membroUnico.appendChild(descricaoCargo);
 
-
-
-
+        quemSomos.appendChild(membroUnico);
 
 
         })

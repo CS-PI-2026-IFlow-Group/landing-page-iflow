@@ -1,38 +1,9 @@
 [
   {
 
-    "nome": "Gustavo Randi",
-    "cargo": "Dev",
-    "foto": "assets/imagens/",
-    "descricaoFoto": "descrica",
-    "descricaoCargo": "descricao"
-
-  },
-  {
-
     "nome": "Ana Beatriz",
     "cargo": "Dev",
-    "foto": "assets/imagens/",
-    "descricaoFoto": "descrica",
-    "descricaoCargo": "descricao"
-
-
-  },
-  {
-
-    "nome": "João Lucas",
-    "cargo": "Dev",
-    "foto": "assets/imagens/svg",
-    "descricaoFoto": "descrica",
-    "descricaoCargo": "descricao"
-
-
-  },
-  {
-
-    "nome": "Giovana Lopes",
-    "cargo": "Dev",
-    "foto": "assets/imagens/",
+    "foto": "assets/images/AnaBeatriz.jpeg",
     "descricaoFoto": "descrica",
     "descricaoCargo": "descricao"
 
@@ -42,7 +13,7 @@
 
     "nome": "Brayan Matheus",
     "cargo": "Project Owner",
-    "foto": "assets/imagens/",
+    "foto": "assets/images/BrayanMatheus.jpeg",
     "descricaoFoto": "descrica",
     "descricaoCargo": "descricao"
 
@@ -52,11 +23,39 @@
 
     "nome": "Eliandro",
     "cargo": "Scrum master",
-    "foto": "assets/imagens/",
+    "foto": "assets/images/Eliandro.jpeg",
+    "descricaoFoto": "descrica",
+    "descricaoCargo": "descricao"
+
+
+  },
+  {
+
+    "nome": "Giovana Lopes",
+    "cargo": "Dev",
+    "foto": "assets/images/GiovanaLopes.jpeg",
+    "descricaoFoto": "descrica",
+    "descricaoCargo": "descricao"
+
+
+  },
+  {
+
+    "nome": "Gustavo Randi",
+    "cargo": "Dev",
+    "foto": "assets/images/GustavoRandi.jpeg",
+    "descricaoFoto": "descrica",
+    "descricaoCargo": "descricao"
+
+  },
+  {
+
+    "nome": "João Lucas",
+    "cargo": "Dev",
+    "foto": "assets/images/JoaoLucas.jpeg",
     "descricaoFoto": "descrica",
     "descricaoCargo": "descricao"
 
 
   }
-
 ]

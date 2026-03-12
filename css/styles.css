@@ -640,7 +640,7 @@ body.alto-contraste .acessibilidade button img{
     margin: 20px;
     width: auto;
     overflow: hidden;
-    box-shadow: 0 2px 5px #093F59;;
+    box-shadow: 0 2px 5px #093F59;
     border-radius: var(--borda-redonda);
 
 }
@@ -764,11 +764,54 @@ details[open] summary .caret-faq-icon{
  }
 
 
-
-
 .quem-somos-logo{
     height: 60px;
     width: 60px;
+}
 
+
+.container-membros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+.foto-membro{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.membro-unico-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    min-width: 0;
+    min-height: 320px;
+    padding: 20px;
+    box-shadow:  0 2px 5px #093F59;
+    border-radius: var(--borda-redonda);
+}
+
+.membro-unico-container h1{
+    overflow-wrap: break-word;
+    max-width: 20ch;
+}
+
+@media (min-width: 1024px){
+    .membro-unico-container{
+        width:300px;
+
+    }
 
 }
+
