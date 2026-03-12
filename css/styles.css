@@ -804,6 +804,7 @@ body.alto-contraste .acessibilidade button img{
         font-weight: 700;
         cursor: pointer;
         font-family: var(--fonte-padrao);
+        font-size: 1rem;
         transition: var(--transition);
     }
 
