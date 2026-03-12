@@ -1,0 +1,33 @@
+[
+  {
+    "pergunta": "Para que serve o sistema iFlow?",
+    "resposta": "O iFlow foi desenvolvido para ajudar empresas de transporte a organizar e divulgar seus serviços de viagens e fretamento. A plataforma permite apresentar informações sobre veículos, rotas e serviços de forma clara para os clientes."
+  },
+  {
+    "pergunta": "O iFlow pode ajudar na divulgação das viagens?",
+    "resposta": "Sim. O sistema permite exibir as viagens e serviços disponíveis em um portal organizado, facilitando para que clientes encontrem as opções oferecidas pela empresa."
+  },
+  {
+    "pergunta": "Posso atualizar as informações das viagens facilmente?",
+    "resposta": "Sim. O sistema foi pensado para permitir alterações rápidas, como adicionar novas viagens, atualizar informações ou ajustar detalhes sempre que necessário."
+  },
+  {
+    "pergunta": "O sistema pode ser usado por diferentes pessoas da empresa?",
+    "resposta": "Sim. Dependendo do plano contratado, diferentes membros da equipe podem acessar o sistema para visualizar ou atualizar informações."
+  },
+  {
+    "pergunta": "O iFlow permite mostrar informações sobre os veículos da empresa?",
+    "resposta": "Sim. É possível apresentar detalhes sobre os veículos utilizados, como tipo de ônibus, capacidade e outras características relevantes para os clientes."
+  },
+  {
+    "pergunta": "Quais são os planos disponíveis no iFlow?",
+    "resposta": "O iFlow possui diferentes planos para atender empresas de transporte de diversos tamanhos, incluindo o Plano Basic, voltado para operações menores, e o Plano Pro, que oferece recursos mais completos de gestão."
+  },{
+  "pergunta": "Qual a diferença entre o plano Basic e o plano Pro?",
+  "resposta": "O plano Basic é indicado para operações menores e inclui vitrine digital com até 4 veículos, gestão de agenda manual e geração de orçamentos em PDF. Já o plano Pro oferece veículos ilimitados na vitrine digital, gestão de agenda automatizada com alertas e orçamentos personalizados com logo e histórico."
+},
+  {
+    "pergunta": "O sistema oferece suporte aos usuários?",
+    "resposta": "Sim. O plano Basic oferece suporte via e-mail, enquanto o plano Pro conta com suporte prioritário por WhatsApp para agilizar o atendimento às empresas."
+  }
+  ]
