@@ -694,17 +694,18 @@ body.alto-contraste .acessibilidade button img{
         line-height: 1.3;
     }
 
-}
+
 
 
 #faq-container details{
     margin: 20px;
     width: auto;
     overflow: hidden;
-    box-shadow: 0 2px 5px #093F59;;
+    box-shadow: 0 2px 5px #093F59;
     border-radius: var(--borda-redonda);
 
 }
+
 
 
 #faq-container summary {
