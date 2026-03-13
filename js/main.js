@@ -213,6 +213,9 @@ fetch("json/membros.json")
         const descricaoCargo = document.createElement("h3");
         const foto = document.createElement("img");
         const membroUnico = document.createElement("div");
+        const botaoGit = document.createElement("a");
+        const botaoLinkedin = document.createElement("a");
+
 
         membroUnico.classList.add("membro-unico-container");
 
@@ -223,6 +226,9 @@ fetch("json/membros.json")
         nomeMembro.textContent = item.nome;
         cargo.textContent = item.cargo;
         descricaoCargo.textContent = item.descricaoCargo;
+
+        botaoGit.href = item.linkGit;
+        botaoGit.contextText =
 
         membroUnico.appendChild(foto);
         membroUnico.appendChild(nomeMembro);

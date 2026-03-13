@@ -2,10 +2,11 @@
   {
 
     "nome": "Ana Beatriz",
-    "cargo": "Dev",
+    "cargo": "Desenvolvedor",
     "foto": "assets/images/AnaBeatriz.jpeg",
-    "descricaoFoto": "descrica",
-    "descricaoCargo": "descricao"
+    "descricaoFoto": "Foto mulher",
+    "linkGit": "",
+    "botaoLinkedin": ""
 
 
   },
@@ -14,47 +15,52 @@
     "nome": "Brayan Matheus",
     "cargo": "Project Owner",
     "foto": "assets/images/BrayanMatheus.jpeg",
-    "descricaoFoto": "descrica",
-    "descricaoCargo": "descricao"
+    "descricaoFoto": "Foto homem",
+    "linkGit": "",
+    "botaoLinkedin": ""
 
 
   },
   {
 
-    "nome": "Eliandro",
+    "nome": "Eliandro Gomes",
     "cargo": "Scrum master",
-    "foto": "assets/images/Eliandro.jpeg",
-    "descricaoFoto": "descrica",
-    "descricaoCargo": "descricao"
+    "foto": "assets/images/EliandroGomes.jpeg",
+    "descricaoFoto": "Foto homem",
+    "linkGit": "",
+    "botaoLinkedin": ""
 
 
   },
   {
 
     "nome": "Giovana Lopes",
-    "cargo": "Dev",
+    "cargo": "Desenvolvedor",
     "foto": "assets/images/GiovanaLopes.jpeg",
-    "descricaoFoto": "descrica",
-    "descricaoCargo": "descricao"
+    "descricaoFoto": "Foto mulher",
+    "linkGit": "",
+    "botaoLinkedin": ""
 
 
   },
   {
 
     "nome": "Gustavo Randi",
-    "cargo": "Dev",
+    "cargo": "Desenvolvedor",
     "foto": "assets/images/GustavoRandi.jpeg",
-    "descricaoFoto": "descrica",
-    "descricaoCargo": "descricao"
+    "descricaoFoto": "Foto homem",
+    "linkGit": "",
+    "botaoLinkedin": ""
 
   },
   {
 
     "nome": "João Lucas",
-    "cargo": "Dev",
+    "cargo": "Desenvolvedor",
     "foto": "assets/images/JoaoLucas.jpeg",
-    "descricaoFoto": "descrica",
-    "descricaoCargo": "descricao"
+    "descricaoFoto": "Foto homem",
+    "linkGit": "",
+    "botaoLinkedin": ""
 
 
   }
