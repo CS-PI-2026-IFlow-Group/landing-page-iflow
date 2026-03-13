@@ -12,7 +12,6 @@ img {
     height: auto;
 }
 
-/* pra scrollar fofinho */
 html{
     scroll-behavior: smooth;
     
@@ -319,7 +318,6 @@ section {
     line-height: 1.8;
 }
 
-
 .acessibilidade {
     position: fixed;
     bottom: 30px;
@@ -378,7 +376,7 @@ body.alto-contraste .acessibilidade button img{
 
 .carrossel-wrapper {
     position: relative;
-    max-width: 800px;
+    max-width: 800px; 
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -395,7 +393,7 @@ body.alto-contraste .acessibilidade button img{
 .carrossel-imagens {
     display: flex;
     width: 100%;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out; 
 }
 
 .carrossel-btn {
@@ -448,7 +446,7 @@ body.alto-contraste .acessibilidade button img{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.9); 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1089,6 +1087,253 @@ body.alto-contraste .contato-pessoal a img {
         color: #000;
         border: 2px solid #000;
     }
+/* ===== planos ===== */
+.planos-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.planos-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--cor-subtitulos);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.planos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.plano-card {
+    background-color: var(--background-padrao);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: 2px solid transparent;
+}
+
+.plano-card:hover,
+.plano-card:focus {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+    border-color: var(--cor-secundaria);
+    outline: none;
+}
+.plano-card:focus-visible {
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 4px;
+}
+
+.plano-btn:focus-visible {
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 4px;
+}
+
+.plano-destaque {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 8px 30px rgba(9, 63, 89, 0.18);
+}
+
+.plano-badge {
+    display: inline-block;
+    background-color: rgba(9, 63, 89, 0.1);
+    color: var(--cor-primaria);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    align-self: flex-start;
+}
+
+.destaque-badge {
+    background-color: var(--cor-primaria);
+    color: var(--white);
+}
+
+.plano-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.plano-nome {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-top: 0.25rem;
+}
+
+.plano-preco {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin: 0.25rem 0;
+}
+
+.preco-valor {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--cor-primaria);
+    line-height: 1;
+}
+
+.preco-periodo {
+    font-size: 1rem;
+    color: var(--cor-subtitulos);
+}
+
+.plano-descricao {
+    font-size: 0.95rem;
+    color: var(--cor-subtitulos);
+    line-height: 1.6;
+}
+
+.plano-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    flex: 1;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--cor-subtitulos);
+}
+
+.feature-icon {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--cor-primaria);
+    min-width: 18px;
+    text-align: center;
+}
+
+.feature-disabled {
+    opacity: 0.4;
+    text-decoration: line-through;
+}
+
+.feature-disabled .feature-icon {
+    color: #999;
+}
+
+.plano-btn {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.plano-btn:hover,
+.plano-btn:focus {
+    background-color: var(--cor-primaria);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    outline: none;
+}
+
+.plano-btn-destaque {
+    background-color: var(--cor-primaria);
+    color: var(--white);
+}
+
+.plano-btn-destaque:hover,
+.plano-btn-destaque:focus {
+    background-color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
+}
+
+/* alto contraste - planos */
+body.alto-contraste .plano-card {
+    box-shadow: 0 2px 10px rgba(164, 164, 164, 0.3);
+    border-color: transparent;
+}
+
+body.alto-contraste .plano-card:hover,
+body.alto-contraste .plano-card:focus {
+    border-color: var(--cor-secundaria);
+}
+
+body.alto-contraste .plano-destaque {
+    border-color: var(--cor-secundaria);
+}
+
+body.alto-contraste .plano-badge {
+    background-color: transparent;
+    border: 1px solid var(--cor-primaria);
+}
+
+body.alto-contraste .destaque-badge {
+    background-color: var(--cor-secundaria);
+    color: #000;
+    border-color: var(--cor-secundaria);
+}
+
+body.alto-contraste .plano-btn {
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
+body.alto-contraste .plano-btn:hover,
+body.alto-contraste .plano-btn:focus {
+    background-color: var(--cor-primaria);
+    color: var(--white);
+}
+
+body.alto-contraste .plano-btn-destaque {
+    background-color: var(--cor-secundaria);
+    color: #000;
+    border-color: var(--cor-secundaria);
+}
+
+@media (max-width: 768px) {
+    .planos-title {
+        font-size: 2rem;
+    }
+
+    .planos-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .preco-valor {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .plano-card {
+        padding: 1.5rem;
+    }
+}
 
 
 .tecnologias {
