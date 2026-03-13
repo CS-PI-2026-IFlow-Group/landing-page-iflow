@@ -977,7 +977,7 @@ details[open] summary .caret-faq-icon{
 .tecnologias {
   padding: 40px 0;
   text-align: center;
-  background-color: #f3f3f3;
+  background-color: var(--white);
 
 }
 
