@@ -988,12 +988,14 @@ details[open] summary .caret-faq-icon{
 .tecnologias-title {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: var(--cor-titulos)
 }
 
 .tecnologias-subtitle {
   max-width: 600px;
   margin: 0 auto 20px auto;
   font-size: 1rem;
+    color: var(--cor-subtitulos);
 }
 
 .tech-grid {
