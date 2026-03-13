@@ -224,6 +224,7 @@
             </div>
           </div>
         </div>
+        <div></div>
       </section>
 
       <!--joao-->
@@ -253,15 +254,67 @@
           <h2>Perguntas Frequentes</h2>
           </div>
           <div id="faq-container">
-              <div class="caret-faq-icon">
-<!--                  <img src="assets/svg/caret-faq.svg" alt="icone de flecha">-->
-              </div>
           </div>
       </section>
-      
+
       <!--joao-->
-      <section class="contato" id="contato"></section>
-      
+        <section class="contato" id="contato">
+            <div class="container">
+                <h2 class="produto-title">Contato</h2>
+                <p class="produto-subtitle">Preencha os campos para falar conosco.</p>
+
+              <div class="contato-wrapper">
+                <div class="contato-info">
+                  <h3>Fale com a gente</h3>
+                  <p>Tem alguma dúvida ou quer saber mais sobre o IFlow? Preencha o formulário e entraremos em contato em breve.</p>
+                  <ul class="contato-detalhes">
+                    <li><img src="assets/svg/circle-user-solid-full-blue.svg" alt="Ícone de envelope"> contato@iflowgroup.com</li>
+                    <li><img src="assets/svg/mobile-solid-full-blue.svg" alt="Ícone de celular"> Atendimento via WhatsApp</li>
+                    <li><img src="assets/svg/calendar-solid-full-blue.svg" alt="Ícone de calendário"> Segunda a Sexta, das 9h às 18h</li>
+                  </ul>
+                  <div class="contato-social">
+                    <a href="https://linkedin.com/company/iflowgroup" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da IFlow Group">
+                      <img src="assets/svg/linkedin.svg" alt="Ícone do LinkedIn">
+                    </a>
+                    <a href="https://github.com/CS-PI-2026-IFlow-Group" target="_blank" rel="noopener noreferrer" aria-label="GitHub da IFlow Group">
+                      <img src="assets/svg/github.svg" alt="Ícone do GitHub">
+                    </a>
+                    <a href="https://instagram.com/iflowgroup" target="_blank" rel="noopener noreferrer" aria-label="Instagram da IFlow Group">
+                      <img src="assets/svg/instagram.svg" alt="Ícone do Instagram">
+                    </a>
+                  </div>
+                </div>
+                <div class="contato-form-wrapper">
+                    <form id="form-contato" class="contato-form">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                          <input type="text" id="nome" name="nome" placeholder="Seu nome" required aria-describedby="error-nome">
+                          <span class="error-message" id="error-nome" role="alert"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                          <input type="email" id="email" name="email" placeholder="seu@email.com" required aria-describedby="error-email">
+                          <span class="error-message" id="error-email" role="alert"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Descrição</label>
+                          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?" required aria-describedby="error-mensagem"></textarea>
+                          <span class="error-message" id="error-mensagem" role="alert"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-enviar-email">Enviar por E-mail</button>
+
+                        <button type="button" id="btn-whatsapp" class="btn-whatsapp">
+                            Enviar mensagem pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </section>
+
     </main>
 
     <footer></footer>
