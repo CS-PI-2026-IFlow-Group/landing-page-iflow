@@ -49,6 +49,18 @@
               alt="Logo do sistema IFlow Group"
             />
           </div>
+            <!-- Botão MOBILE: visível só no mobile, fica no header -->
+            <div class="lang-switcher lang-switcher--mobile" role="navigation" aria-label="Seletor de idioma / Language selector">
+                <button class="lang-btn active" id="btn-pt-mobile" data-lang="pt"
+                        aria-label="Mudar idioma para Português" aria-pressed="true" title="Português">
+                    PT
+                </button>
+                <span class="lang-divider" aria-hidden="true">|</span>
+                <button class="lang-btn" id="btn-en-mobile" data-lang="en"
+                        aria-label="Change language to English" aria-pressed="false" title="English">
+                    EN
+                </button>
+            </div>
 
           <button class="menu-toggle" aria-label="Abrir menu">
             <span class="menu"></span>
@@ -61,6 +73,18 @@
             <a href="#quem-somos" class="nav-link">Quem somos</a>
             <a href="#faq" class="nav-link">FAQ</a>
             <a href="#contato" class="nav-link">Contato</a>
+              <!-- Botão DESKTOP: visível só no desktop, fica dentro da nav -->
+              <div class="lang-switcher lang-switcher--desktop" role="navigation" aria-label="Seletor de idioma / Language selector">
+                  <button class="lang-btn active" id="btn-pt-desktop" data-lang="pt"
+                          aria-label="Mudar idioma para Português" aria-pressed="true" title="Português">
+                      PT
+                  </button>
+                  <span class="lang-divider" aria-hidden="true">|</span>
+                  <button class="lang-btn" id="btn-en-desktop" data-lang="en"
+                          aria-label="Change language to English" aria-pressed="false" title="English">
+                      EN
+                  </button>
+              </div>
           </nav>
         </div>
       </div>
