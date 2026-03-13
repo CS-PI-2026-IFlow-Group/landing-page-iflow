@@ -324,7 +324,7 @@ fetch("json/membros.json")
         botaoGit.href = item.linkGit;
         botaoGit.target = "_blank";
 
-        botaoLinkedin.href = item.linkLinkedin
+        botaoLinkedin.href = item.botaoLinkedin
         botaoLinkedin.target = "_blank";
 
 

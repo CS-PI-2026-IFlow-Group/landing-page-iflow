@@ -901,17 +901,39 @@ details[open] summary .caret-faq-icon{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 20px;
+    margin: 20px 40px;
     min-width: 30px;
     min-height: 40px;
+    gap: 30px;
 }
 
 .contato-pessoal img{
     width: 40px;
     height: 40px;
-    margin: 10px 15px;
+    margin: 15px 20px;
+    filter: brightness(0) invert(1);
+}
+
+.contato-pessoal a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    width: 51px;
+    height: 51px;
 
 }
+
+
+body.alto-contraste .contato-pessoal a {
+    background-color: #ffff00;
+}
+
+body.alto-contraste .contato-pessoal a img {
+    filter: brightness(0);
+}
+
 
 .container-membros{
     display: flex;
@@ -947,10 +969,7 @@ details[open] summary .caret-faq-icon{
     position: relative;
 }
 
-.membro-unico-container{
-    content: "";
 
-}
 
 .membro-unico-container h1{
     overflow-wrap: break-word;

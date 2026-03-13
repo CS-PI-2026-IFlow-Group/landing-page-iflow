@@ -6,7 +6,7 @@
     "foto": "assets/images/AnaBeatriz.jpeg",
     "descricaoFoto": "Foto mulher",
     "linkGit": "https://github.com/anabeatm",
-    "linkLinkedin": "https://www.linkedin.com/in/anabeatavares/"
+    "botaoLinkedin": "https://www.linkedin.com/in/anabeatavares/"
 
 
   },
@@ -28,7 +28,7 @@
     "foto": "assets/images/EliandroGomes.jpeg",
     "descricaoFoto": "Foto homem",
     "linkGit": "https://github.com/eliandrodasilva",
-    "botaoLinkedin": ""
+    "botaoLinkedin": "https://www.linkedin.com/in/eliandrodasilva/"
 
 
   },
@@ -50,7 +50,7 @@
     "foto": "assets/images/GustavoRandi.jpeg",
     "descricaoFoto": "Foto homem",
     "linkGit": "https://github.com/RandGusta/",
-    "botaoLinkedin": ""
+    "botaoLinkedin": "https://www.linkedin.com/in/gustavo-randi-6245712a7/"
 
   },
   {
