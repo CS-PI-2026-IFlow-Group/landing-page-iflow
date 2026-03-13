@@ -1,0 +1,143 @@
+body.alto-contraste {
+    --background-padrao: #000000;
+    --cor-primaria: #ffffff;
+    --cor-secundaria: #ffff00;
+    --white: #000000;
+    --cor-subtitulos: #ffffff;
+    --cor-titulos: #ffff00;
+}
+
+body.alto-contraste .nav-bar {
+    border: 2px solid #fff;
+}
+
+body.alto-contraste .title img {
+    filter: brightness(0);
+}
+
+body.alto-contraste .nav-link {
+    color: #000 !important;
+    border-bottom-color: transparent;
+}
+
+body.alto-contraste .nav-link:hover {
+    border-bottom-color: #000;
+}
+
+body.alto-contraste .menu,
+body.alto-contraste .menu::before,
+body.alto-contraste .menu::after {
+    background: #000;
+}
+
+body.alto-contraste .segundo-btn {
+    background-color: transparent;
+    border-color: #000000;
+}
+
+body.alto-contraste .segundo-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+body.alto-contraste .produto-cards {
+    box-shadow: 0 2px 10px rgba(164, 164, 164, 0.3);
+}
+
+body.alto-contraste .produto-cards img {
+    filter: brightness(0) invert(1) !important;
+}
+
+body.alto-contraste .carrossel-viewport {
+    border: 2px solid var(--cor-secundaria);
+    box-shadow: none;
+}
+
+body.alto-contraste .carrossel-img {
+    border: none;
+}
+
+body.alto-contraste .nav-link {
+    border-bottom-color: #464545;
+}
+
+body.alto-contraste .acessibilidade button img {
+    filter: brightness(0);
+}
+
+body.alto-contraste .contato-social a {
+    background-color: #ffff00;
+}
+
+body.alto-contraste .contato-social a img {
+    filter: brightness(0);
+}
+
+body.alto-contraste .contato-info p {
+    color: #ffffff;
+}
+
+body.alto-contraste .contato-detalhes li img {
+    filter: brightness(0) invert(1);
+}
+
+body.alto-contraste .btn-whatsapp {
+    background-color: var(--cor-secundaria);
+    color: #000;
+    border: 2px solid #000;
+}
+
+body.alto-contraste .btn-enviar-email {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+body.alto-contraste .btn-enviar-email:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+body.alto-contraste .plano-card {
+    box-shadow: 0 2px 10px rgba(164, 164, 164, 0.3);
+    border-color: transparent;
+}
+
+body.alto-contraste .plano-card:hover,
+body.alto-contraste .plano-card:focus {
+    border-color: var(--cor-secundaria);
+}
+
+body.alto-contraste .plano-destaque {
+    border-color: var(--cor-secundaria);
+}
+
+body.alto-contraste .plano-badge {
+    background-color: transparent;
+    border: 1px solid var(--cor-primaria);
+}
+
+body.alto-contraste .destaque-badge {
+    background-color: var(--cor-secundaria);
+    color: #000;
+    border-color: var(--cor-secundaria);
+}
+
+body.alto-contraste .plano-btn {
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
+body.alto-contraste .plano-btn:hover,
+body.alto-contraste .plano-btn:focus {
+    background-color: var(--cor-primaria);
+    color: var(--white);
+}
+
+body.alto-contraste .plano-btn-destaque {
+    background-color: var(--cor-secundaria);
+    color: #000;
+    border-color: var(--cor-secundaria);
+}

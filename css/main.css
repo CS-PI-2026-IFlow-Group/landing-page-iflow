@@ -1,0 +1,13 @@
+@import url('./variables.css');
+ 
+@import url('./base.css');
+@import url('./alto-contraste.css');
+@import url('./modo-escuro.css');
+ 
+@import url('./header.css');
+@import url('./home.css');
+@import url('./produtos.css');
+@import url('./contato.css');
+@import url('./faq.css');
+@import url('./tecnologias.css');
+@import url('./planos.css');
