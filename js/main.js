@@ -223,3 +223,54 @@ track.addEventListener("mouseleave", startAutoPlay);
 window.addEventListener("resize", updateCarousel);
 
 startAutoPlay();
+
+
+
+
+const faq = document.getElementById("faq-container");
+
+fetch("json/faq.json")
+    .then(resposta => resposta.json())
+    .then(faqLista =>{
+        faqLista.forEach(item =>{
+            const details = document.createElement("details");
+            const summary = document.createElement("summary");
+            const p = document.createElement("p");
+            const img = document.createElement("img");
+            img.src = "assets/svg/caret-faq.svg"
+            img.alt = "seta para abrir pergunta"
+            img.classList.add("caret-faq-icon");
+
+
+            summary.textContent = item.pergunta;
+            summary.append(img);
+            p.textContent = item.resposta;
+
+            details.append(summary);
+            details.append(p);
+
+            faq.append(details);
+    });
+
+
+const todasTagsDetails = document.querySelectorAll("details");
+
+todasTagsDetails.forEach((details)=>{
+    details.addEventListener("toggle", () => {
+    if(details.open){
+        todasTagsDetails.forEach((outro)=>{
+
+            if(details !== outro){
+                   outro.removeAttribute("open");
+            }
+        }
+        )
+    }
+
+
+})
+
+
+});
+
+});
