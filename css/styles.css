@@ -896,6 +896,23 @@ details[open] summary .caret-faq-icon{
 }
 
 
+
+.contato-pessoal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+    min-width: 30px;
+    min-height: 40px;
+}
+
+.contato-pessoal img{
+    width: 40px;
+    height: 40px;
+    margin: 10px 15px;
+
+}
+
 .container-membros{
     display: flex;
     flex-wrap: wrap;
