@@ -970,21 +970,12 @@ details[open] summary .caret-faq-icon{
     }
 
 
-.contato{
-    padding: 200px;
-}
-
 .tecnologias {
   padding: 40px 0;
   text-align: center;
   background-color: var(--white);
 
 }
-
-.tecnologias .container{
-    height: 195px;
-}
-
 .tecnologias-title {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -1002,7 +993,6 @@ details[open] summary .caret-faq-icon{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 90px;
   gap: 40px; 
   flex-wrap: wrap; 
 }
@@ -1031,7 +1021,7 @@ details[open] summary .caret-faq-icon{
 @media (max-width: 900px) {
 
   .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 
 }
@@ -1048,7 +1038,6 @@ details[open] summary .caret-faq-icon{
   }
 
   .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
