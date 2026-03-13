@@ -5,19 +5,19 @@
     "cargo": "Desenvolvedor",
     "foto": "assets/images/AnaBeatriz.jpeg",
     "descricaoFoto": "Foto mulher",
-    "linkGit": "",
-    "botaoLinkedin": ""
+    "linkGit": "https://github.com/anabeatm",
+    "linkLinkedin": "https://www.linkedin.com/in/anabeatavares/"
 
 
   },
   {
 
-    "nome": "Brayan Matheus",
+    "nome": "Brayan Mateus",
     "cargo": "Project Owner",
     "foto": "assets/images/BrayanMatheus.jpeg",
     "descricaoFoto": "Foto homem",
-    "linkGit": "",
-    "botaoLinkedin": ""
+    "linkGit":" https://github.com/BrayanMateus5",
+    "botaoLinkedin": "https://www.linkedin.com/in/brayan-mateus-7856062aa/"
 
 
   },
@@ -27,7 +27,7 @@
     "cargo": "Scrum master",
     "foto": "assets/images/EliandroGomes.jpeg",
     "descricaoFoto": "Foto homem",
-    "linkGit": "",
+    "linkGit": "https://github.com/eliandrodasilva",
     "botaoLinkedin": ""
 
 
@@ -38,8 +38,8 @@
     "cargo": "Desenvolvedor",
     "foto": "assets/images/GiovanaLopes.jpeg",
     "descricaoFoto": "Foto mulher",
-    "linkGit": "",
-    "botaoLinkedin": ""
+    "linkGit": "https://github.com/Eberle-gio",
+    "botaoLinkedin": "https://www.linkedin.com/in/giovana-lopes-a10750288/"
 
 
   },
@@ -49,7 +49,7 @@
     "cargo": "Desenvolvedor",
     "foto": "assets/images/GustavoRandi.jpeg",
     "descricaoFoto": "Foto homem",
-    "linkGit": "",
+    "linkGit": "https://github.com/RandGusta/",
     "botaoLinkedin": ""
 
   },
@@ -59,8 +59,8 @@
     "cargo": "Desenvolvedor",
     "foto": "assets/images/JoaoLucas.jpeg",
     "descricaoFoto": "Foto homem",
-    "linkGit": "",
-    "botaoLinkedin": ""
+    "linkGit": "http://github.com/joaolucaspinheiro",
+    "botaoLinkedin": "https://www.linkedin.com/in/joaolucaspinheiro/"
 
 
   }

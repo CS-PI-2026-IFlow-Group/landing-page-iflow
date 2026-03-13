@@ -292,27 +292,52 @@ fetch("json/membros.json")
         const descricaoCargo = document.createElement("h3");
         const foto = document.createElement("img");
         const membroUnico = document.createElement("div");
+
         const botaoGit = document.createElement("a");
         const botaoLinkedin = document.createElement("a");
+        const iconeGit = document.createElement("img");
+        const iconeLinkedin = document.createElement("img");
+        const contatoPessoal = document.createElement("div");
 
 
         membroUnico.classList.add("membro-unico-container");
 
+        contatoPessoal.classList.add("contato-pessoal");
+
         foto.src = item.foto;
         foto.alt = item.descricaoFoto;
         foto.classList.add("foto-membro");
+
+
+        iconeGit.src = "assets/svg/github.svg";
+        iconeGit.alt = "ícone do GitHub"
+
+        iconeLinkedin.src = "assets/svg/linkedin.svg";
+        iconeLinkedin.alt = "ícone do LinkedIn";
+
+
 
         nomeMembro.textContent = item.nome;
         cargo.textContent = item.cargo;
         descricaoCargo.textContent = item.descricaoCargo;
 
         botaoGit.href = item.linkGit;
-        botaoGit.contextText =
+        botaoGit.target = "_blank";
+
+        botaoLinkedin.href = item.linkLinkedin
+        botaoLinkedin.target = "_blank";
+
+
+        botaoLinkedin.appendChild(iconeLinkedin);
+        botaoGit.appendChild(iconeGit);
+        contatoPessoal.appendChild(botaoGit);
+        contatoPessoal.appendChild(botaoLinkedin);
 
         membroUnico.appendChild(foto);
         membroUnico.appendChild(nomeMembro);
         membroUnico.appendChild(cargo);
         membroUnico.appendChild(descricaoCargo);
+        membroUnico.appendChild(contatoPessoal);
 
         quemSomos.appendChild(membroUnico);
 
