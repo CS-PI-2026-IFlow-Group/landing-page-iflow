@@ -51,9 +51,15 @@ window.addEventListener("DOMContentLoaded", () => {
   const contrasteSalvo = localStorage.getItem("alto-contraste");
   const temaAtual = localStorage.getItem("tema");
 
+  const sistemaPedeEscuro = window.matchMedia(
+    "(prefers-color-scheme: dark)",
+  ).matches;
+
   if (contrasteSalvo === "true") {
     body.classList.add("alto-contraste");
   } else if (temaAtual === "dark") {
+    body.classList.add("modo-escuro");
+  } else if (temaAtual === null && sistemaPedeEscuro) {
     body.classList.add("modo-escuro");
   }
 });
