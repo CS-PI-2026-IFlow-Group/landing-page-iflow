@@ -431,17 +431,27 @@
 
       <!-- gustavo -->
       <section class="quem-somos" id="quem-somos">
-        <div class ="quem-somos-cabecalho">
+        <div class="quem-somos-cabecalho">
           <div class="quem-somos-logo">
-            <img src="assets/images/logo.png" alt="logo da empresa">
+            <img src="assets/images/logo.png" alt="logo da empresa" />
           </div>
           <h2>Quem somos</h2>
-          <p>A iFlow é uma empresa independente de tecnologia dedicada a transformar a gestão de transportadores de turismo com soluções inteligentes e personalizadas. Nosso foco é simplificar a operação de empresas de transporte, desde pequenas empresas familiares até frotas maiores, oferecendo ferramentas digitais que otimizam o controle de viagens, reservas e roteiros.
-            Fundada para suprir uma lacuna no setor de turismo, a empresa desenvolveu um sistema completo que facilita o dia a dia de gestores e motoristas, permitindo um acompanhamento preciso das operações e aumentando a eficiência do serviço. Por ser independente, temos liberdade para adaptar nossas soluções às necessidades reais de nossos clientes, implementando melhorias contínuas com base no feedback de quem usa.</p>
+          <p>
+            A iFlow é uma empresa independente de tecnologia dedicada a
+            transformar a gestão de transportadores de turismo com soluções
+            inteligentes e personalizadas. Nosso foco é simplificar a operação
+            de empresas de transporte, desde pequenas empresas familiares até
+            frotas maiores, oferecendo ferramentas digitais que otimizam o
+            controle de viagens, reservas e roteiros. Fundada para suprir uma
+            lacuna no setor de turismo, a empresa desenvolveu um sistema
+            completo que facilita o dia a dia de gestores e motoristas,
+            permitindo um acompanhamento preciso das operações e aumentando a
+            eficiência do serviço. Por ser independente, temos liberdade para
+            adaptar nossas soluções às necessidades reais de nossos clientes,
+            implementando melhorias contínuas com base no feedback de quem usa.
+          </p>
         </div>
-        <div class="container-membros">
-          
-        </div>
+        <div class="container-membros"></div>
       </section>
 
       <!-- gustavo -->
@@ -654,51 +664,60 @@
     </main>
 
     <footer class="footer">
-  <div class="container footer-top">
+      <div class="container footer-top">
+        <!-- navegação -->
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+          <a href="#produto">Sobre</a>
+          <a href="#planos">Planos</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contato">Contato</a>
+          <a href="#tecnologias">Tecnologias</a>
+        </nav>
 
-    <!-- navegação -->
-    <nav class="footer-nav" aria-label="Navegação do rodapé">
-      <a href="#produto">Sobre</a>
-      <a href="#planos">Planos</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contato">Contato</a>
-      <a href="#tecnologias">Tecnologias</a>
-    </nav>
+        <!-- redes sociais -->
+        <div class="footer-social">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub da equipe"
+          >
+            <img src="assets/svg/github.svg" alt="GitHub" />
+          </a>
 
-    <!-- redes sociais -->
-    <div class="footer-social">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn da equipe"
+          >
+            <img src="assets/svg/linkedin.svg" alt="LinkedIn" />
+          </a>
 
-      <a href="https://github.com"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="GitHub da equipe">
-        <img src="assets/svg/github.svg" alt="GitHub">
-      </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram da equipe"
+          >
+            <img src="assets/svg/instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+      </div>
 
-      <a href="https://linkedin.com"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="LinkedIn da equipe">
-        <img src="assets/svg/linkedin.svg" alt="LinkedIn">
-      </a>
+      <div class="footer-bottom">
+        <p>© 2026 IFlow Group • Todos os direitos reservados</p>
+      </div>
+    </footer>
 
-      <a href="https://instagram.com"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Instagram da equipe">
-        <img src="assets/svg/instagram.svg" alt="Instagram">
-      </a>
+    <div class="acessibilidade" id="menu-acessibilidade">
+      <button
+        id="btn-toggle-acessibilidade"
+        aria-label="Abrir opções de acessibilidade"
+      >
+        <span class="seta-acessibilidade">&#10094;</span>
+      </button>
 
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2026 IFlow Group • Todos os direitos reservados</p>
-  </div>
-</footer>
-
-    <div class="acessibilidade">
       <button id="diminuir-fonte" title="Diminuir fonte">A-</button>
       <button id="aumentar-fonte" title="Aumentar fonte">A+</button>
       <button id="modo-escuro" title="Alternar para o Modo Escuro">
@@ -723,7 +742,11 @@
 
     <div class="image-modal" id="imageModal">
       <span class="close-modal" id="closeModal">&times;</span>
-      <img class="modal-content" id="expandedImg" />
+      <img
+        class="modal-content"
+        id="expandedImg"
+        alt="Um X para fechar o aumento da imagem"
+      />
     </div>
     <script src="./js/main.js"></script>
   </body>

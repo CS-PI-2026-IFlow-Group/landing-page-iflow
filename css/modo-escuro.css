@@ -90,3 +90,15 @@ body.modo-escuro .plano-btn-destaque:hover {
 body.modo-escuro .tecnologias {
     background-color: #0e354a;
 }
+
+body.modo-escuro .footer {
+    background: var(--background-padrao);
+}
+
+body.modo-escuro .footer-social a {
+    background-color: var(--background-padrao);
+}
+
+body.modo-escuro .footer-social a:hover {
+    background-color: var(--cor-secundaria);
+}
