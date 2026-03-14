@@ -3,6 +3,7 @@
 
     "nome": "Ana Beatriz",
     "cargo": "Desenvolvedor",
+    "cargo_en": "Developer",
     "foto": "assets/images/AnaBeatriz.jpeg",
     "descricaoFoto": "Foto mulher",
     "linkGit": "https://github.com/anabeatm",
@@ -14,6 +15,7 @@
 
     "nome": "Brayan Mateus",
     "cargo": "Project Owner",
+    "cargo_en": "Project Owner",
     "foto": "assets/images/BrayanMatheus.jpeg",
     "descricaoFoto": "Foto homem",
     "linkGit":" https://github.com/BrayanMateus5",
@@ -24,7 +26,8 @@
   {
 
     "nome": "Eliandro Gomes",
-    "cargo": "Gerente de Projeto",
+    "cargo": "Scrum Master",
+    "cargo_en": "Scrum Master",
     "foto": "assets/images/EliandroGomes.jpeg",
     "descricaoFoto": "Foto homem",
     "linkGit": "https://github.com/eliandrodasilva",
@@ -36,6 +39,7 @@
 
     "nome": "Giovana Lopes",
     "cargo": "Desenvolvedor",
+    "cargo_en": "Developer",
     "foto": "assets/images/GiovanaLopes.jpeg",
     "descricaoFoto": "Foto mulher",
     "linkGit": "https://github.com/Eberle-gio",
@@ -47,6 +51,7 @@
 
     "nome": "Gustavo Randi",
     "cargo": "Desenvolvedor",
+    "cargo_en": "Developer",
     "foto": "assets/images/GustavoRandi.jpeg",
     "descricaoFoto": "Foto homem",
     "linkGit": "https://github.com/RandGusta/",
@@ -57,6 +62,7 @@
 
     "nome": "João Lucas",
     "cargo": "Desenvolvedor",
+    "cargo_en": "Developer",
     "foto": "assets/images/JoaoLucas.jpeg",
     "descricaoFoto": "Foto homem",
     "linkGit": "http://github.com/joaolucaspinheiro",
