@@ -1,7 +1,24 @@
 body.modo-escuro {
     --background-padrao: #10222e;
-    --cor-secundaria: #A7A4C5;
+    --cor-primaria: #0f1921;
+    --cor-secundaria: #504d75;
     --white: #FFFFFF;
     --cor-titulos: #e9eef1;
     --cor-subtitulos: #d9e1e8;
+}
+
+#modo-escuro .tema-icone-sol {
+    display: none; 
+}
+
+#modo-escuro .tema-icone-lua {
+    display: flex;
+}
+
+body.modo-escuro #modo-escuro .tema-icone-sol {
+    display: flex;
+}
+
+body.modo-escuro #modo-escuro .tema-icone-lua {
+    display: none;
 }

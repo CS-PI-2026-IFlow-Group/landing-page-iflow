@@ -42,44 +42,77 @@ document.getElementById("diminuir-fonte").addEventListener("click", () => {
   }
 });
 
-const btnContraste = document.getElementById("alto-contraste");
-btnContraste.addEventListener("click", () => {
-  document.body.classList.toggle("alto-contraste");
+// dark mode e controle de temas
+const btnTemaEscuro = document.getElementById("modo-escuro");
+const btnAltoContraste = document.getElementById("alto-contraste");
+const body = document.body;
 
-  const isContraste = document.body.classList.contains("alto-contraste");
+window.addEventListener("DOMContentLoaded", () => {
+  const contrasteSalvo = localStorage.getItem("alto-contraste");
+  const temaAtual = localStorage.getItem("tema");
+
+  if (contrasteSalvo === "true") {
+    body.classList.add("alto-contraste");
+  } else if (temaAtual === "dark") {
+    body.classList.add("modo-escuro");
+  }
+});
+
+btnAltoContraste.addEventListener("click", () => {
+  body.classList.toggle("alto-contraste");
+
+  if (body.classList.contains("alto-contraste")) {
+    body.classList.remove("modo-escuro");
+    localStorage.setItem("tema", "light");
+  }
+
+  const isContraste = body.classList.contains("alto-contraste");
   localStorage.setItem("alto-contraste", isContraste);
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-  const contrastSaved = localStorage.getItem("alto-contraste");
-  if (contrastSaved === "true") {
-    document.body.classList.add("alto-contraste");
+btnTemaEscuro.addEventListener("click", () => {
+  body.classList.toggle("modo-escuro");
+
+  if (body.classList.contains("modo-escuro")) {
+    body.classList.remove("alto-contraste");
+    localStorage.setItem("alto-contraste", "false");
+  }
+
+  if (body.classList.contains("modo-escuro")) {
+    localStorage.setItem("tema", "dark");
+  } else {
+    localStorage.setItem("tema", "light");
   }
 });
-const form = document.getElementById('form-contato');
-const btnWhatsapp = document.getElementById('btn-whatsapp');
+
+const form = document.getElementById("form-contato");
+const btnWhatsapp = document.getElementById("btn-whatsapp");
 
 // Mapeamento dos campos para facilitar a manutenção
 const camposConfig = [
-  { id: 'nome', erroId: 'error-nome', msg: 'Digite seu nome completo.' },
-  { id: 'email', erroId: 'error-email', msg: 'Informe um e-mail válido.' },
-  { id: 'mensagem', erroId: 'error-mensagem', msg: 'Escreva uma breve descrição.' }
+  { id: "nome", erroId: "error-nome", msg: "Digite seu nome completo." },
+  { id: "email", erroId: "error-email", msg: "Informe um e-mail válido." },
+  {
+    id: "mensagem",
+    erroId: "error-mensagem",
+    msg: "Escreva uma breve descrição.",
+  },
 ];
 
 // Função para limpar o erro de um campo específico
 function limparErro(input, erroSpan) {
-  input.classList.remove('input-error');
-  erroSpan.style.display = 'none';
-  erroSpan.textContent = '';
+  input.classList.remove("input-error");
+  erroSpan.style.display = "none";
+  erroSpan.textContent = "";
 }
 
-camposConfig.forEach(campo => {
+camposConfig.forEach((campo) => {
   const input = document.getElementById(campo.id);
   const erroSpan = document.getElementById(campo.erroId);
 
-  input.addEventListener('input', () => {
+  input.addEventListener("input", () => {
     if (input.value.trim() !== "") {
-      if (campo.id === 'email') {
+      if (campo.id === "email") {
         if (input.validity.valid) limparErro(input, erroSpan);
       } else {
         limparErro(input, erroSpan);
@@ -91,14 +124,17 @@ camposConfig.forEach(campo => {
 function validarFormulario() {
   let statusValido = true;
 
-  camposConfig.forEach(campo => {
+  camposConfig.forEach((campo) => {
     const input = document.getElementById(campo.id);
     const erroSpan = document.getElementById(campo.erroId);
 
-    if (!input.value.trim() || (campo.id === 'email' && !input.validity.valid)) {
-      input.classList.add('input-error');
+    if (
+      !input.value.trim() ||
+      (campo.id === "email" && !input.validity.valid)
+    ) {
+      input.classList.add("input-error");
       erroSpan.textContent = campo.msg;
-      erroSpan.style.display = 'block';
+      erroSpan.style.display = "block";
       statusValido = false;
     } else {
       limparErro(input, erroSpan);
@@ -108,31 +144,38 @@ function validarFormulario() {
   return statusValido;
 }
 
-form.addEventListener('submit', function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   if (validarFormulario()) {
-    const nome = document.getElementById('nome').value;
-    const mensagem = document.getElementById('mensagem').value;
+    const nome = document.getElementById("nome").value;
+    const mensagem = document.getElementById("mensagem").value;
     const emailDestino = "contato@iflowgroup.com";
 
-    const assunto = encodeURIComponent("Contato via Landing Page - IFlow Group");
-    const corpo = encodeURIComponent(`Olá, sou ${nome}.\n\nDescrição:\n${mensagem}`);
+    const assunto = encodeURIComponent(
+      "Contato via Landing Page - IFlow Group",
+    );
+    const corpo = encodeURIComponent(
+      `Olá, sou ${nome}.\n\nDescrição:\n${mensagem}`,
+    );
 
     window.location.href = `mailto:${emailDestino}?subject=${assunto}&body=${corpo}`;
     this.reset();
   }
 });
 
-btnWhatsapp.addEventListener('click', function() {
+btnWhatsapp.addEventListener("click", function () {
   if (validarFormulario()) {
-    const nome = document.getElementById('nome').value;
-    const mensagem = document.getElementById('mensagem').value;
+    const nome = document.getElementById("nome").value;
+    const mensagem = document.getElementById("mensagem").value;
     const numeroTelefone = "5500000000000";
 
     const texto = `Olá, sou ${nome}. ${mensagem}`;
     const msgCodificada = encodeURIComponent(texto);
 
-    window.open(`https://wa.me/${numeroTelefone}?text=${msgCodificada}`, '_blank');
+    window.open(
+      `https://wa.me/${numeroTelefone}?text=${msgCodificada}`,
+      "_blank",
+    );
   }
 });
 
@@ -224,53 +267,41 @@ window.addEventListener("resize", updateCarousel);
 
 startAutoPlay();
 
-
-
-
 const faq = document.getElementById("faq-container");
 
 fetch("json/faq.json")
-    .then(resposta => resposta.json())
-    .then(faqLista =>{
-        faqLista.forEach(item =>{
-            const details = document.createElement("details");
-            const summary = document.createElement("summary");
-            const p = document.createElement("p");
-            const img = document.createElement("img");
-            img.src = "assets/svg/caret-faq.svg"
-            img.alt = "seta para abrir pergunta"
-            img.classList.add("caret-faq-icon");
+  .then((resposta) => resposta.json())
+  .then((faqLista) => {
+    faqLista.forEach((item) => {
+      const details = document.createElement("details");
+      const summary = document.createElement("summary");
+      const p = document.createElement("p");
+      const img = document.createElement("img");
+      img.src = "assets/svg/caret-faq.svg";
+      img.alt = "seta para abrir pergunta";
+      img.classList.add("caret-faq-icon");
 
+      summary.textContent = item.pergunta;
+      summary.append(img);
+      p.textContent = item.resposta;
 
-            summary.textContent = item.pergunta;
-            summary.append(img);
-            p.textContent = item.resposta;
+      details.append(summary);
+      details.append(p);
 
-            details.append(summary);
-            details.append(p);
-
-            faq.append(details);
+      faq.append(details);
     });
 
+    const todasTagsDetails = document.querySelectorAll("details");
 
-const todasTagsDetails = document.querySelectorAll("details");
-
-todasTagsDetails.forEach((details)=>{
-    details.addEventListener("toggle", () => {
-    if(details.open){
-        todasTagsDetails.forEach((outro)=>{
-
-            if(details !== outro){
-                   outro.removeAttribute("open");
+    todasTagsDetails.forEach((details) => {
+      details.addEventListener("toggle", () => {
+        if (details.open) {
+          todasTagsDetails.forEach((outro) => {
+            if (details !== outro) {
+              outro.removeAttribute("open");
             }
+          });
         }
-        )
-    }
-
-
-})
-
-
-});
-
-});
+      });
+    });
+  });
