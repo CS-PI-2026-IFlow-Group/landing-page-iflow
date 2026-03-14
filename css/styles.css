@@ -906,8 +906,8 @@ details[open] summary .caret-faq-icon{
 }
 
 .contato-pessoal img{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     margin: 15px 20px;
     filter: brightness(0) invert(1);
 }
@@ -920,8 +920,15 @@ details[open] summary .caret-faq-icon{
     border-radius: 50%;
     width: 51px;
     height: 51px;
+    transition: var(--transition);
 
 }
+
+.contato-pessoal a:hover {
+        background-color: var(--cor-secundaria);
+        transform: translateY(-3px);
+}
+
 
 
 body.alto-contraste .contato-pessoal a {
