@@ -22,3 +22,71 @@ body.modo-escuro #modo-escuro .tema-icone-sol {
 body.modo-escuro #modo-escuro .tema-icone-lua {
     display: none;
 }
+
+body.modo-escuro h1, 
+body.modo-escuro h2, 
+body.modo-escuro h3 {
+    color: var(--cor-titulos);
+}
+
+body.modo-escuro p,
+body.modo-escuro li {
+    color: var(--cor-subtitulos);
+}
+
+body.modo-escuro .produto-icone img,
+body.modo-escuro .faq-icon img,
+body.modo-escuro .contato-detalhes li img {
+    filter: brightness(0) invert(1);
+}
+
+body.modo-escuro .produto-cards,
+body.modo-escuro .plano-card,
+body.modo-escuro .contato-form {
+    background-color: #0e354a; 
+    border: 1px solid #19475f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.modo-escuro .home{
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+}
+
+body.modo-escuro .form-group label {
+    color: var(--cor-titulos);
+}
+
+body.modo-escuro #faq h2{
+    color: var(--cor-titulos);
+}
+
+body.modo-escuro #faq-container summary, body.modo-escuro #faq-container p{
+    color: var(--cor-subtitulos);
+}
+
+body.modo-escuro .preco-valor, body.modo-escuro .plano-badge {
+    color: var(--cor-titulos);
+}
+
+body.modo-escuro .plano-btn {
+    color: var(--white);
+    border: 2px solid var(--cor-subtitulos);
+}
+
+body.modo-escuro .plano-btn:hover {
+    background-color: var(--cor-titulos);
+    color: var(--cor-primaria);
+}
+
+body.modo-escuro .plano-btn-destaque {
+    color: var(--cor-titulos);
+    border: 2px solid var(--cor-primaria);
+}
+
+body.modo-escuro .plano-btn-destaque:hover {
+    border-color: var(--white);
+}
+
+body.modo-escuro .tecnologias {
+    background-color: #0e354a;
+}
