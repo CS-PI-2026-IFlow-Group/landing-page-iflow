@@ -347,7 +347,7 @@ fetch("json/membros.json")
 
 
         nomeMembro.textContent = item.nome;
-        cargo.textContent = item.cargo;
+        cargo.textContent = currentLang === "en" && item.cargo_en ? item.cargo_en : item.cargo;
         descricaoCargo.textContent = item.descricaoCargo;
 
         botaoGit.href = item.linkGit;
