@@ -85,5 +85,14 @@
   "tech.subtitle": "We build our solutions using modern technologies that ensure performance, security and scalability.",
 
   "lang.btn.pt": "Switch language to Portuguese",
-  "lang.btn.en": "Switch language to English"
+  "lang.btn.en": "Switch language to English",
+  "quem-somos.title": "About Us",
+  "quem-somos.desc": "iFlow is an independent technology company dedicated to transforming the management of tourism transport operators with intelligent and personalized solutions. Our focus is to simplify the operations of transport companies, from small family businesses to larger fleets, offering digital tools that optimize the control of trips, bookings and itineraries. Founded to fill a gap in the tourism sector, the company developed a complete system that streamlines the daily work of managers and drivers, enabling precise operational tracking and increasing service efficiency. Being independent gives us the freedom to adapt our solutions to the real needs of our clients, implementing continuous improvements based on feedback from those who use it.",
+
+  "footer.sobre": "About",
+  "footer.planos": "Plans",
+  "footer.faq": "FAQ",
+  "footer.contato": "Contact",
+  "footer.tecnologias": "Technologies",
+  "footer.direitos": "© 2026 IFlow Group • All rights reserved"
 }
