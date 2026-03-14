@@ -49,18 +49,41 @@
               alt="Logo do sistema IFlow Group"
             />
           </div>
+            <!-- Botão MOBILE: visível só no mobile, fica no header -->
+            <div class="lang-switcher lang-switcher--mobile" role="navigation" aria-label="Seletor de idioma / Language selector">
+                <button class="lang-btn active" id="btn-pt-mobile" data-lang="pt"
+                        aria-label="Mudar idioma para Português" aria-pressed="true" title="Português">
+                    PT
+                </button>
+                <span class="lang-divider" aria-hidden="true">|</span>
+                <button class="lang-btn" id="btn-en-mobile" data-lang="en"
+                        aria-label="Change language to English" aria-pressed="false" title="English">
+                    EN
+                </button>
+            </div>
 
           <button class="menu-toggle" aria-label="Abrir menu">
             <span class="menu"></span>
           </button>
 
           <nav class="nav-bar">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#produto" class="nav-link">Produto</a>
-            <a href="#planos" class="nav-link">Planos</a>
-            <a href="#quem-somos" class="nav-link">Quem somos</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-            <a href="#contato" class="nav-link">Contato</a>
+              <a href="#produto" class="nav-link" data-i18n="nav.produto">Produto</a>
+              <a href="#planos" class="nav-link" data-i18n="nav.planos">Planos</a>
+              <a href="#quem-somos" class="nav-link" data-i18n="nav.quem-somos">Quem somos</a>
+              <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+              <a href="#contato" class="nav-link" data-i18n="nav.contato">Contato</a>
+              <!-- Botão DESKTOP: visível só no desktop, fica dentro da nav -->
+              <div class="lang-switcher lang-switcher--desktop" role="navigation" aria-label="Seletor de idioma / Language selector">
+                  <button class="lang-btn active" id="btn-pt-desktop" data-lang="pt"
+                          aria-label="Mudar idioma para Português" aria-pressed="true" title="Português">
+                      PT
+                  </button>
+                  <span class="lang-divider" aria-hidden="true">|</span>
+                  <button class="lang-btn" id="btn-en-desktop" data-lang="en"
+                          aria-label="Change language to English" aria-pressed="false" title="English">
+                      EN
+                  </button>
+              </div>
           </nav>
         </div>
       </div>
@@ -71,17 +94,17 @@
       <section class="home" id="home">
         <div class="container">
           <div class="home-content">
-            <h1 class="home-title">
-              Transforme sua Agência com Tecnologia de Ponta
-            </h1>
-            <p class="home-subtitle">
-              Gerencie reservas, cotações e finanças em uma única plataforma
-              intuitiva e poderosa
-            </p>
+              <h1 class="home-title" data-i18n="home.title">
+                  Transforme sua Agência com Tecnologia de Ponta
+              </h1>
+              <p class="home-subtitle" data-i18n="home.subtitle">
+                  Gerencie reservas, cotações e finanças em uma única plataforma
+                  intuitiva e poderosa
+              </p>
 
             <div class="home-buttons">
-              <a href="#planos" class="btn primeiro-btn">Ver Planos</a>
-              <a href="#contato" class="btn segundo-btn">Solicitar Demo</a>
+                <a href="#planos" class="btn primeiro-btn" data-i18n="home.btn.planos">Ver Planos</a>
+                <a href="#contato" class="btn segundo-btn" data-i18n="home.btn.demo">Solicitar Demo</a>
             </div>
           </div>
         </div>
@@ -90,11 +113,11 @@
       <!-- sobre o produto -->
       <section class="produto" id="produto">
         <div class="container">
-          <h2 class="produto-title">Sobre o Produto</h2>
-          <p class="produto-subtitle">
-            Uma solução completa que simplifica a gestão da sua agência de
-            fretamento de turismo
-          </p>
+            <h2 class="produto-title" data-i18n="produto.title">Sobre o Produto</h2>
+            <p class="produto-subtitle" data-i18n="produto.subtitle">
+                Uma solução completa que simplifica a gestão da sua agência de
+                fretamento de turismo
+            </p>
 
           <div class="produto-grid">
             <div class="produto-cards">
@@ -104,11 +127,11 @@
                   alt="Ícone de um ônibus"
                 />
               </div>
-              <h3>Gestão de Frota</h3>
-              <p>
-                Controle completo dos veículos disponíveis, manutenções
-                programadas e disponibilidade em tempo real
-              </p>
+                <h3 data-i18n="produto.frota.title">Gestão de Frota</h3>
+                <p data-i18n="produto.frota.desc">
+                    Controle completo dos veículos disponíveis, manutenções
+                    programadas e disponibilidade em tempo real
+                </p>
             </div>
 
             <div class="produto-cards">
@@ -118,11 +141,11 @@
                   alt="Ícone de uma cédula de dinheiro"
                 />
               </div>
-              <h3>Cotações Automáticas</h3>
-              <p>
-                Gere cotações precisas instantaneamente considerando distância,
-                combustível, pedágios e custos operacionais
-              </p>
+                <h3 data-i18n="produto.cotacoes.title">Cotações Automáticas</h3>
+                <p data-i18n="produto.cotacoes.desc">
+                    Gere cotações precisas instantaneamente considerando distância,
+                    combustível, pedágios e custos operacionais
+                </p>
             </div>
 
             <div class="produto-cards">
@@ -132,11 +155,11 @@
                   alt="Ícone de um gráfico"
                 />
               </div>
-              <h3>Gestão Financeira</h3>
-              <p>
-                Controle total de receitas, despesas, fluxo de caixa e
-                relatórios financeiros detalhados
-              </p>
+                <h3 data-i18n="produto.financeiro.title">Gestão Financeira</h3>
+                <p data-i18n="produto.financeiro.desc">
+                    Controle total de receitas, despesas, fluxo de caixa e
+                    relatórios financeiros detalhados
+                </p>
             </div>
 
             <div class="produto-cards">
@@ -146,11 +169,11 @@
                   alt="Ícone de um calendário"
                 />
               </div>
-              <h3>Agendamento Inteligente</h3>
-              <p>
-                Calendário integrado com visualização de todas as viagens,
-                evitando conflitos e otimizando a operação
-              </p>
+                <h3 data-i18n="produto.agenda.title">Agendamento Inteligente</h3>
+                <p data-i18n="produto.agenda.desc">
+                    Calendário integrado com visualização de todas as viagens,
+                    evitando conflitos e otimizando a operação
+                </p>
             </div>
 
             <div class="produto-cards">
@@ -160,11 +183,11 @@
                   alt="Ícone de uma pessoa"
                 />
               </div>
-              <h3>Gestão de clientes</h3>
-              <p>
-                Histórico completo de clientes, preferências e integração com
-                ferramentas de marketing
-              </p>
+                <h3 data-i18n="produto.clientes.title">Gestão de clientes</h3>
+                <p data-i18n="produto.clientes.desc">
+                    Histórico completo de clientes, preferências e integração com
+                    ferramentas de marketing
+                </p>
             </div>
 
             <div class="produto-cards">
@@ -174,20 +197,20 @@
                   alt="Ícone de um celular"
                 />
               </div>
-              <h3>Acesso Mobile</h3>
-              <p>
-                Gerencie seu negócio de qualquer lugar através de dispositivos
-                móveis com sincronização em tempo real
-              </p>
+                <h3 data-i18n="produto.mobile.title">Acesso Mobile</h3>
+                <p data-i18n="produto.mobile.desc">
+                    Gerencie seu negócio de qualquer lugar através de dispositivos
+                    móveis com sincronização em tempo real
+                </p>
             </div>
           </div>
 
           <div class="imgs-produto">
-            <h2>Conheça sobre o Sistema</h2>
-            <p>
-              Navegue por nossa interface e descubra como é fácil gerenciar a
-              sua frota no dia a dia
-            </p>
+              <h2 data-i18n="produto.sistema.title">Conheça sobre o Sistema</h2>
+              <p data-i18n="produto.sistema.desc">
+                  Navegue por nossa interface e descubra como é fácil gerenciar a
+                  sua frota no dia a dia
+              </p>
 
             <div class="carrossel-wrapper">
               <button class="carrossel-btn prev" aria-label="Imagem anterior">
@@ -230,12 +253,11 @@
       <!--joao-->
       <section class="planos" id="planos" aria-labelledby="planos-titulo">
         <div class="container">
-          <h2 class="planos-title" id="planos-titulo">Nossos Planos</h2>
-          <p class="planos-subtitle">
-            Escolha o plano ideal para o tamanho e as necessidades da sua
+            <h2 class="planos-title" id="planos-titulo" data-i18n="planos.title">Nossos Planos</h2>
+                  <p class="planos-subtitle" data-i18n="planos.subtitle">
+                      Escolha o plano ideal para o tamanho e as necessidades da sua
             agência
-          </p>
-
+                  </p>
           <div class="planos-grid">
             <!-- Plano Starter -->
             <div
@@ -244,66 +266,64 @@
               aria-label="Plano Starter: R$ 197 por mês, ideal para agências iniciantes"
             >
               <div class="plano-header">
-                <span class="plano-badge">Grátis por 14 dias</span>
-                <h3 class="plano-nome">Starter</h3>
+                  <span class="plano-badge" data-i18n="planos.starter.badge">Grátis por 14 dias</span>
+                  <h3 class="plano-nome" data-i18n="planos.starter.name">Starter</h3>
                 <div class="plano-preco">
                   <span class="preco-valor">R$ 197</span>
                   <span class="preco-periodo">/mês</span>
                 </div>
-                <p class="plano-descricao">
+                  <p class="plano-descricao" data-i18n="planos.starter.desc">
                   Ideal para agências que estão começando e querem organizar a
                   operação
-                </p>
-              </div>
+                </p>              </div>
               <ul
                 class="plano-features"
                 aria-label="Recursos incluídos no plano Starter"
               >
-                <li class="feature-item">
-                  <span class="feature-icon" aria-hidden="true">✓</span> Até 2
+                  <li class="feature-item">
+                  <span class="feature-icon" aria-hidden="true">✓</span> <span data-i18n="planos.starter.f1">Até 2
                   usuários
-                </li>
-                <li class="feature-item">
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Cadastro de até 5 veículos
-                </li>
-                <li class="feature-item">
+                  <span data-i18n="planos.starter.f2">Cadastro de até 5 veículos
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Cotações automáticas
-                </li>
-                <li class="feature-item">
+                  <span data-i18n="planos.starter.f3">Cotações automáticas
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Agendamento de viagens
-                </li>
-                <li
+                  <span data-i18n="planos.starter.f4">Agendamento de viagens
+                </span></li>
+                  <li
                   class="feature-item feature-disabled"
                   aria-label="Não incluído: Gestão financeira avançada"
                 >
-                  <span class="feature-icon" aria-hidden="true">✗</span> Gestão
+                  <span class="feature-icon" aria-hidden="true">✗</span> <span data-i18n="planos.starter.f5">Gestão
                   financeira avançada
-                </li>
-                <li
+                </span></li>
+                  <li
                   class="feature-item feature-disabled"
                   aria-label="Não incluído: Relatórios detalhados"
                 >
                   <span class="feature-icon" aria-hidden="true">✗</span>
-                  Relatórios detalhados
-                </li>
-                <li
+                  <span data-i18n="planos.starter.f6">Relatórios detalhados
+                </span></li>
+                  <li
                   class="feature-item feature-disabled"
                   aria-label="Não incluído: Suporte prioritário"
                 >
-                  <span class="feature-icon" aria-hidden="true">✗</span> Suporte
+                  <span class="feature-icon" aria-hidden="true">✗</span> <span data-i18n="planos.starter.f7">Suporte
                   prioritário
-                </li>
+                </span></li>
               </ul>
-              <a
+                <a
                 href="#contato"
                 class="btn plano-btn"
-                aria-label="Contratar plano Starter por R$ 197 por mês"
+                aria-label="Contratar plano Starter por R$ 197 por mês" data-i18n="planos.starter.btn"
                 >Começar Agora</a
-              >
-            </div>
+              >            </div>
 
             <!-- Plano Profissional -->
             <div
@@ -312,57 +332,56 @@
               aria-label="Plano Profissional: R$ 397 por mês, mais popular"
             >
               <div class="plano-header">
-                <span class="plano-badge destaque-badge">Mais Popular</span>
-                <h3 class="plano-nome">Profissional</h3>
+                  <span class="plano-badge destaque-badge" data-i18n="planos.pro.badge">Mais Popular</span>
+                  <h3 class="plano-nome" data-i18n="planos.pro.name">Profissional</h3>
                 <div class="plano-preco">
                   <span class="preco-valor">R$ 397</span>
                   <span class="preco-periodo">/mês</span>
                 </div>
-                <p class="plano-descricao">
+                  <p class="plano-descricao" data-i18n="planos.pro.desc">
                   Para agências em crescimento que precisam de controle total da
                   operação
-                </p>
-              </div>
+                </p>              </div>
               <ul
                 class="plano-features"
                 aria-label="Recursos incluídos no plano Profissional"
               >
-                <li class="feature-item">
-                  <span class="feature-icon" aria-hidden="true">✓</span> Até 8
+                  <li class="feature-item">
+                  <span class="feature-icon" aria-hidden="true">✓</span> <span data-i18n="planos.pro.f1">Até 8
                   usuários
-                </li>
-                <li class="feature-item">
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Veículos ilimitados
-                </li>
-                <li class="feature-item">
+                  <span data-i18n="planos.pro.f2">Veículos ilimitados
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Cotações automáticas
-                </li>
-                <li class="feature-item">
+                  <span data-i18n="planos.pro.f3">Cotações automáticas
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Agendamento inteligente
-                </li>
-                <li class="feature-item">
-                  <span class="feature-icon" aria-hidden="true">✓</span> Gestão
+                  <span data-i18n="planos.pro.f4">Agendamento inteligente
+                </span></li>
+                  <li class="feature-item">
+                  <span class="feature-icon" aria-hidden="true">✓</span> <span data-i18n="planos.pro.f5">Gestão
                   financeira avançada
-                </li>
-                <li class="feature-item">
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Relatórios detalhados
-                </li>
-                <li
+                  <span data-i18n="planos.pro.f6">Relatórios detalhados
+                </span></li>
+                  <li
                   class="feature-item feature-disabled"
                   aria-label="Não incluído: Suporte prioritário"
                 >
-                  <span class="feature-icon" aria-hidden="true">✗</span> Suporte
+                  <span class="feature-icon" aria-hidden="true">✗</span> <span data-i18n="planos.pro.f7">Suporte
                   prioritário
-                </li>
+                </span></li>
               </ul>
-              <a
+                <a
                 href="#contato"
                 class="btn plano-btn plano-btn-destaque"
-                aria-label="Contratar plano Profissional por R$ 397 por mês"
+                aria-label="Contratar plano Profissional por R$ 397 por mês" data-i18n="planos.pro.btn"
                 >Escolher Plano</a
               >
             </div>
@@ -374,13 +393,13 @@
               aria-label="Plano Enterprise: R$ 797 por mês, solução completa"
             >
               <div class="plano-header">
-                <span class="plano-badge">Solução Completa</span>
-                <h3 class="plano-nome">Enterprise</h3>
+                  <span class="plano-badge" data-i18n="planos.enterprise.badge">Solução Completa</span>
+                  <h3 class="plano-nome" data-i18n="planos.enterprise.name">Enterprise</h3>
                 <div class="plano-preco">
                   <span class="preco-valor">R$ 797</span>
                   <span class="preco-periodo">/mês</span>
                 </div>
-                <p class="plano-descricao">
+                  <p class="plano-descricao" data-i18n="planos.enterprise.desc">
                   Para grandes operações que exigem personalização, escala e
                   suporte dedicado
                 </p>
@@ -389,42 +408,41 @@
                 class="plano-features"
                 aria-label="Recursos incluídos no plano Enterprise"
               >
-                <li class="feature-item">
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Usuários ilimitados
-                </li>
-                <li class="feature-item">
+                  <span data-i18n="planos.enterprise.f1">Usuários ilimitados
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Veículos ilimitados
-                </li>
-                <li class="feature-item">
+                  <span data-i18n="planos.enterprise.f2">Veículos ilimitados
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Cotações automáticas
-                </li>
-                <li class="feature-item">
+                  <span data-i18n="planos.enterprise.f3">Cotações automáticas
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Agendamento inteligente
-                </li>
-                <li class="feature-item">
-                  <span class="feature-icon" aria-hidden="true">✓</span> Gestão
+                  <span data-i18n="planos.enterprise.f4">Agendamento inteligente
+                </span></li>
+                  <li class="feature-item">
+                  <span class="feature-icon" aria-hidden="true">✓</span> <span data-i18n="planos.enterprise.f5">Gestão
                   financeira avançada
-                </li>
-                <li class="feature-item">
+                </span></li>
+                  <li class="feature-item">
                   <span class="feature-icon" aria-hidden="true">✓</span>
-                  Relatórios detalhados
-                </li>
-                <li class="feature-item">
-                  <span class="feature-icon" aria-hidden="true">✓</span> Suporte
+                  <span data-i18n="planos.enterprise.f6">Relatórios detalhados
+                </span></li>
+                  <li class="feature-item">
+                  <span class="feature-icon" aria-hidden="true">✓</span> <span data-i18n="planos.enterprise.f7">Suporte
                   prioritário 24/7
-                </li>
+                </span></li>
               </ul>
-              <a
+                <a
                 href="#contato"
                 class="btn plano-btn"
-                aria-label="Contratar plano Enterprise por R$ 797 por mês"
+                aria-label="Contratar plano Enterprise por R$ 797 por mês" data-i18n="planos.enterprise.btn"
                 >Falar com Vendas</a
-              >
-            </div>
+              >            </div>
           </div>
         </div>
       </section>
@@ -460,7 +478,7 @@
           <div class="faq-icon">
             <img src="assets/svg/faq-icon.svg" alt="icone de interrogação" />
           </div>
-          <h2>Perguntas Frequentes</h2>
+              <h2 data-i18n="faq.title">Perguntas Frequentes</h2>
         </div>
         <div id="faq-container"></div>
       </section>
@@ -468,13 +486,12 @@
       <!--joao-->
       <section class="contato" id="contato">
         <div class="container">
-          <h2 class="produto-title">Contato</h2>
-          <p class="produto-subtitle">Preencha os campos para falar conosco.</p>
-
+          <h2 class="produto-title" data-i18n="contato.title">Contato</h2>
+          <p class="produto-subtitle" data-i18n="contato.subtitle">Preencha os campos para falar conosco.</p>
           <div class="contato-wrapper">
             <div class="contato-info">
-              <h3>Fale com a gente</h3>
-              <p>
+                <h3 data-i18n="contato.info.title">Fale com a gente</h3>
+                <p data-i18n="contato.info.desc">
                 Tem alguma dúvida ou quer saber mais sobre o IFlow? Preencha o
                 formulário e entraremos em contato em breve.
               </p>
@@ -486,20 +503,20 @@
                   />
                   contato@iflowgroup.com
                 </li>
-                <li>
+                  <li>
                   <img
                     src="assets/svg/mobile-solid-full-blue.svg"
                     alt="Ícone de celular"
                   />
-                  Atendimento via WhatsApp
-                </li>
-                <li>
+                  <span data-i18n="contato.info.whatsapp">Atendimento via WhatsApp
+                </span></li>
+                  <li>
                   <img
                     src="assets/svg/calendar-solid-full-blue.svg"
                     alt="Ícone de calendário"
                   />
-                  Segunda a Sexta, das 9h às 18h
-                </li>
+                  <span data-i18n="contato.info.horario">Segunda a Sexta, das 9h às 18h
+                </span></li>
               </ul>
               <div class="contato-social">
                 <a
@@ -534,13 +551,13 @@
             <div class="contato-form-wrapper">
               <form id="form-contato" class="contato-form">
                 <div class="form-group">
-                  <label for="nome">Nome</label>
-                  <input
+                  <label for="nome" data-i18n="contato.form.nome.label">Nome</label>
+                    <input
                     type="text"
                     id="nome"
                     name="nome"
                     placeholder="Seu nome"
-                    required
+                    data-i18n-placeholder="contato.form.nome.placeholder" required
                     aria-describedby="error-nome"
                   />
                   <span
@@ -551,13 +568,13 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="email">E-mail</label>
-                  <input
+                  <label for="email" data-i18n="contato.form.email.label">E-mail</label>
+                    <input
                     type="email"
                     id="email"
                     name="email"
                     placeholder="seu@email.com"
-                    required
+                    data-i18n-placeholder="contato.form.email.placeholder" required
                     aria-describedby="error-email"
                   />
                   <span
@@ -568,27 +585,27 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="mensagem">Descrição</label>
-                  <textarea
+                  <label for="mensagem" data-i18n="contato.form.mensagem.label">Descrição</label>
+                    <textarea
                     id="mensagem"
                     name="mensagem"
                     rows="4"
                     placeholder="Como podemos ajudar?"
-                    required
+                    data-i18n-placeholder="contato.form.mensagem.placeholder" required
                     aria-describedby="error-mensagem"
                   ></textarea>
-                  <span
+                    <span
                     class="error-message"
                     id="error-mensagem"
                     role="alert"
                   ></span>
                 </div>
 
-                <button type="submit" class="btn btn-enviar-email">
+                <button type="submit" class="btn btn-enviar-email" data-i18n="contato.form.btn.email">
                   Enviar por E-mail
                 </button>
 
-                <button type="button" id="btn-whatsapp" class="btn-whatsapp">
+                <button type="button" id="btn-whatsapp" class="btn-whatsapp" data-i18n="contato.form.btn.whatsapp">
                   Enviar mensagem pelo WhatsApp
                 </button>
               </form>
@@ -599,13 +616,12 @@
 
       <section class="tecnologias" id="tecnologias">
         <div class="container">
-          <h2 class="tecnologias-title">Tecnologias que Utilizamos</h2>
+              <h2 class="tecnologias-title" data-i18n="tech.title">Tecnologias que Utilizamos</h2>
 
-          <p class="tecnologias-subtitle">
-            Desenvolvemos nossas soluções utilizando tecnologias modernas que
-            garantem desempenho, segurança e escalabilidade.
-          </p>
-
+              <p class="tecnologias-subtitle" data-i18n="tech.subtitle">
+                  Desenvolvemos nossas soluções utilizando tecnologias modernas que
+                  garantem desempenho, segurança e escalabilidade.
+              </p>
           <div class="tech-grid">
             <div
               class="tech-item"
@@ -667,11 +683,11 @@
       <div class="container footer-top">
         <!-- navegação -->
         <nav class="footer-nav" aria-label="Navegação do rodapé">
-          <a href="#produto">Sobre</a>
-          <a href="#planos">Planos</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contato">Contato</a>
-          <a href="#tecnologias">Tecnologias</a>
+            <a href="#produto" data-i18n="footer.sobre">Sobre</a>
+            <a href="#planos" data-i18n="footer.planos">Planos</a>
+            <a href="#faq" data-i18n="footer.faq">FAQ</a>
+            <a href="#contato" data-i18n="footer.contato">Contato</a>
+            <a href="#tecnologias" data-i18n="footer.tecnologias">Tecnologias</a>
         </nav>
 
         <!-- redes sociais -->
@@ -706,7 +722,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 IFlow Group • Todos os direitos reservados</p>
+          <p data-i18n="footer.direitos">© 2026 IFlow Group • Todos os direitos reservados</p>
       </div>
     </footer>
 

@@ -199,7 +199,45 @@ function closeImageModal() {
   }, 300);
   startAutoPlay();
 }
+// ==================== i18n ====================
+const langBtns = document.querySelectorAll(".lang-btn");
+let currentLang = localStorage.getItem("lang") || "pt";
+let translations = {};
 
+async function loadTranslations(lang) {
+    const res = await fetch(`./js/i18n/${lang}.json`);
+    return await res.json();
+}
+
+async function setLanguage(lang) {
+    translations = await loadTranslations(lang);
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[key]) el.textContent = translations[key];
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (translations[key]) el.placeholder = translations[key];
+    });
+
+    document.documentElement.lang = lang;
+    loadFaq(lang);
+    loadMembros(lang);    langBtns.forEach(btn => {
+        const isActive = btn.getAttribute("data-lang") === lang;
+        btn.classList.toggle("active", isActive);
+        btn.setAttribute("aria-pressed", String(isActive));
+    });
+}
+
+langBtns.forEach(btn => {
+    btn.addEventListener("click", () => setLanguage(btn.getAttribute("data-lang")));
+});
+
+setLanguage(currentLang);
 closeModal.addEventListener("click", closeImageModal);
 modal.addEventListener("click", function (e) {
   if (e.target === modal) closeImageModal();
@@ -267,56 +305,67 @@ window.addEventListener("resize", updateCarousel);
 
 startAutoPlay();
 
-const faq = document.getElementById("faq-container");
 
-fetch("json/faq.json")
-  .then((resposta) => resposta.json())
-  .then((faqLista) => {
-    faqLista.forEach((item) => {
-      const details = document.createElement("details");
-      const summary = document.createElement("summary");
-      const p = document.createElement("p");
-      const img = document.createElement("img");
-      img.src = "assets/svg/caret-faq.svg";
-      img.alt = "seta para abrir pergunta";
-      img.classList.add("caret-faq-icon");
 
-      summary.textContent = item.pergunta;
-      summary.append(img);
-      p.textContent = item.resposta;
 
-      details.append(summary);
-      details.append(p);
+const faqContainer = document.getElementById("faq-container");
 
-      faq.append(details);
+function renderFaq(faqLista) {
+    faqContainer.innerHTML = "";
+
+    faqLista.forEach(item => {
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        const p = document.createElement("p");
+        const img = document.createElement("img");
+        img.src = "assets/svg/caret-faq.svg";
+        img.alt = "seta para abrir pergunta";
+        img.classList.add("caret-faq-icon");
+
+        summary.textContent = item.pergunta;
+        summary.append(img);
+        p.textContent = item.resposta;
+
+        details.append(summary);
+        details.append(p);
+        faqContainer.append(details);
     });
 
-    const todasTagsDetails = document.querySelectorAll("details");
-
-    todasTagsDetails.forEach((details) => {
-      details.addEventListener("toggle", () => {
-        if (details.open) {
-          todasTagsDetails.forEach((outro) => {
-            if (details !== outro) {
-              outro.removeAttribute("open");
+    document.querySelectorAll("details").forEach(details => {
+        details.addEventListener("toggle", () => {
+            if (details.open) {
+                document.querySelectorAll("details").forEach(outro => {
+                    if (details !== outro) outro.removeAttribute("open");
+                });
             }
-          });
-        }
-      });
+        });
     });
-  });
+}
+
+function loadFaq(lang) {
+    const arquivo = lang === "en" ? "json/faq-en.json" : "json/faq.json";
+    fetch(arquivo)
+        .then(res => res.json())
+        .then(renderFaq);
+}
+
+loadFaq(currentLang);
+
+
 
 const quemSomos = document.querySelector(".container-membros");
 
-fetch("json/membros.json")
-  .then((resposta) => resposta.json())
-  .then((membrosLista) => {
-    membrosLista.forEach((item) => {
-      const nomeMembro = document.createElement("h1");
-      const cargo = document.createElement("p");
-      const descricaoCargo = document.createElement("h3");
-      const foto = document.createElement("img");
-      const membroUnico = document.createElement("div");
+function loadMembros(lang) {
+    fetch("./json/membros.json")
+        .then(resposta => resposta.json())
+        .then(membrosLista => {
+            quemSomos.innerHTML = "";
+            membrosLista.forEach(item => {
+        const nomeMembro = document.createElement("h1");
+        const cargo = document.createElement("p");
+        const descricaoCargo = document.createElement("h3");
+        const foto = document.createElement("img");
+        const membroUnico = document.createElement("div");
 
       const botaoGit = document.createElement("a");
       const botaoLinkedin = document.createElement("a");
@@ -338,9 +387,9 @@ fetch("json/membros.json")
       iconeLinkedin.src = "assets/svg/linkedin.svg";
       iconeLinkedin.alt = "ícone do LinkedIn";
 
-      nomeMembro.textContent = item.nome;
-      cargo.textContent = item.cargo;
-      descricaoCargo.textContent = item.descricaoCargo;
+        nomeMembro.textContent = item.nome;
+                cargo.textContent = lang === "en" && item.cargo_en ? item.cargo_en : item.cargo;
+        descricaoCargo.textContent = item.descricaoCargo;
 
       botaoGit.href = item.linkGit;
       botaoGit.target = "_blank";
@@ -359,9 +408,12 @@ fetch("json/membros.json")
       membroUnico.appendChild(descricaoCargo);
       membroUnico.appendChild(contatoPessoal);
 
-      quemSomos.appendChild(membroUnico);
-    });
-  });
+                quemSomos.appendChild(membroUnico);
+            });
+        });
+}
+
+loadMembros(currentLang);
 
 const menuAcessibilidade = document.getElementById("menu-acessibilidade");
 const btnToggleAcessibilidade = document.getElementById(

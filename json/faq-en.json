@@ -1,0 +1,34 @@
+[
+  {
+    "pergunta": "What is the iFlow system for?",
+    "resposta": "iFlow was developed to help transport companies organize and promote their travel and charter services. The platform allows you to present information about vehicles, routes and services clearly to customers."
+  },
+  {
+    "pergunta": "Can iFlow help promote trips?",
+    "resposta": "Yes. The system allows you to display available trips and services in an organized portal, making it easier for customers to find the options offered by the company."
+  },
+  {
+    "pergunta": "Can I update trip information easily?",
+    "resposta": "Yes. The system was designed to allow quick changes, such as adding new trips, updating information or adjusting details whenever necessary."
+  },
+  {
+    "pergunta": "Can the system be used by different people in the company?",
+    "resposta": "Yes. Depending on the contracted plan, different team members can access the system to view or update information."
+  },
+  {
+    "pergunta": "Does iFlow allow showing information about the company's vehicles?",
+    "resposta": "Yes. It is possible to present details about the vehicles used, such as bus type, capacity and other relevant characteristics for customers."
+  },
+  {
+    "pergunta": "What plans are available in iFlow?",
+    "resposta": "iFlow has different plans to serve transport companies of various sizes, including the Basic Plan, aimed at smaller operations, and the Pro Plan, which offers more complete management features."
+  },
+  {
+    "pergunta": "What is the difference between the Basic and Pro plans?",
+    "resposta": "The Basic plan is recommended for smaller operations and includes a digital showcase with up to 4 vehicles, manual schedule management and PDF quote generation. The Pro plan offers unlimited vehicles in the digital showcase, automated schedule management with alerts and personalized quotes with logo and history."
+  },
+  {
+    "pergunta": "Does the system offer user support?",
+    "resposta": "Yes. The Basic plan offers email support, while the Pro plan has priority WhatsApp support to speed up service for companies."
+  }
+]
