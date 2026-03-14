@@ -1,0 +1,67 @@
+[
+  {
+
+    "nome": "Ana Beatriz",
+    "cargo": "Desenvolvedor",
+    "foto": "assets/images/AnaBeatriz.jpeg",
+    "descricaoFoto": "Foto mulher",
+    "linkGit": "https://github.com/anabeatm",
+    "botaoLinkedin": "https://www.linkedin.com/in/anabeatavares/"
+
+
+  },
+  {
+
+    "nome": "Brayan Mateus",
+    "cargo": "Project Owner",
+    "foto": "assets/images/BrayanMatheus.jpeg",
+    "descricaoFoto": "Foto homem",
+    "linkGit":" https://github.com/BrayanMateus5",
+    "botaoLinkedin": "https://www.linkedin.com/in/brayan-mateus-7856062aa/"
+
+
+  },
+  {
+
+    "nome": "Eliandro Gomes",
+    "cargo": "Gerente de Projeto",
+    "foto": "assets/images/EliandroGomes.jpeg",
+    "descricaoFoto": "Foto homem",
+    "linkGit": "https://github.com/eliandrodasilva",
+    "botaoLinkedin": "https://www.linkedin.com/in/eliandrodasilva/"
+
+
+  },
+  {
+
+    "nome": "Giovana Lopes",
+    "cargo": "Desenvolvedor",
+    "foto": "assets/images/GiovanaLopes.jpeg",
+    "descricaoFoto": "Foto mulher",
+    "linkGit": "https://github.com/Eberle-gio",
+    "botaoLinkedin": "https://www.linkedin.com/in/giovana-lopes-a10750288/"
+
+
+  },
+  {
+
+    "nome": "Gustavo Randi",
+    "cargo": "Desenvolvedor",
+    "foto": "assets/images/GustavoRandi.jpeg",
+    "descricaoFoto": "Foto homem",
+    "linkGit": "https://github.com/RandGusta/",
+    "botaoLinkedin": "https://www.linkedin.com/in/gustavo-randi-6245712a7/"
+
+  },
+  {
+
+    "nome": "João Lucas",
+    "cargo": "Desenvolvedor",
+    "foto": "assets/images/JoaoLucas.jpeg",
+    "descricaoFoto": "Foto homem",
+    "linkGit": "http://github.com/joaolucaspinheiro",
+    "botaoLinkedin": "https://www.linkedin.com/in/joaolucaspinheiro/"
+
+
+  }
+]
