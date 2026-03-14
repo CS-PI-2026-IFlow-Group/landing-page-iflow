@@ -1257,7 +1257,7 @@ body.alto-contraste .plano-btn-destaque {
 
 /* foco acessível para navegação com teclado */
 .tech-item:focus {
-  outline: 3px solid #c8cbcf;
+  outline: 3px solid var(--cor-secundaria);
   border-radius: 8px;
 }
 /* RESPONSIVIDADE */
@@ -1291,20 +1291,101 @@ body.alto-contraste .plano-btn-destaque {
     height: 45px;
   }
 }
+/* FOOTER */
 
-  .footer {
-  background-color: var(--cor-primaria);
+.footer {
+  background: var(--cor-primaria);
   color: var(--white);
-  padding: 50px 0 20px 0;
+  padding: 25px 0 10px 0;
 }
 
-  .footer-social {
+.footer-top {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-  .footer-social img {
-  width: 100%;
+/* navegação */
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%; /* deixa redondo */
+  background-color: rgba(255,255,255,0.15);
+
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  background-color: var(--cor-secundaria);
+  transform: translateY(-2px);
+}
+/* redes */
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
   filter: brightness(0) invert(1);
+}
+
+/* parte inferior */
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+
+  .footer-top {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+body.alto-contraste .footer-social a{
+    background-color: #ffff00;
+}
+
+body.alto-contraste .footer-social a img {
+    filter:brightness(0);
+}
+
+.footer-nav a:focus,
+.footer-social a:focus{
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 3px;
 }
