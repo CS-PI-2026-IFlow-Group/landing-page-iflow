@@ -183,7 +183,7 @@ async function setLanguage(lang) {
 
     document.documentElement.lang = lang;
     loadFaq(lang);
-    langBtns.forEach(btn => {
+    loadMembros(lang);    langBtns.forEach(btn => {
         const isActive = btn.getAttribute("data-lang") === lang;
         btn.classList.toggle("active", isActive);
         btn.setAttribute("aria-pressed", String(isActive));
@@ -312,10 +312,12 @@ loadFaq(currentLang);
 
 const quemSomos = document.querySelector(".container-membros");
 
-fetch("json/membros.json")
-    .then(resposta => resposta.json())
-    .then(membrosLista => {
-        membrosLista.forEach(item => {
+function loadMembros(lang) {
+    fetch("./json/membros.json")
+        .then(resposta => resposta.json())
+        .then(membrosLista => {
+            quemSomos.innerHTML = "";
+            membrosLista.forEach(item => {
         const nomeMembro = document.createElement("h1");
         const cargo = document.createElement("p");
         const descricaoCargo = document.createElement("h3");
@@ -347,7 +349,7 @@ fetch("json/membros.json")
 
 
         nomeMembro.textContent = item.nome;
-        cargo.textContent = currentLang === "en" && item.cargo_en ? item.cargo_en : item.cargo;
+                cargo.textContent = lang === "en" && item.cargo_en ? item.cargo_en : item.cargo;
         descricaoCargo.textContent = item.descricaoCargo;
 
         botaoGit.href = item.linkGit;
@@ -368,12 +370,9 @@ fetch("json/membros.json")
         membroUnico.appendChild(descricaoCargo);
         membroUnico.appendChild(contatoPessoal);
 
-        quemSomos.appendChild(membroUnico);
+                quemSomos.appendChild(membroUnico);
+            });
+        });
+}
 
-
-        })
-
-
-
-
-    })
+loadMembros(currentLang);
