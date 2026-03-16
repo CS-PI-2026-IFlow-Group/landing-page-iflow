@@ -1,0 +1,69 @@
+.tecnologias {
+    padding: 40px 0;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.tecnologias-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--cor-titulos);
+}
+
+.tecnologias-subtitle {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    font-size: 1rem;
+    color: var(--cor-subtitulos);
+}
+
+.tech-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.tech-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.tech-item:focus {
+    outline: 3px solid #c8cbcf;
+    border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+    .tech-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tecnologias {
+        padding: 60px 15px;
+    }
+
+    .tecnologias-title {
+        font-size: 1.6rem;
+    }
+
+    .tech-grid {
+        gap: 20px;
+    }
+
+    .tech-item img {
+        width: 45px;
+        height: 45px;
+    }
+}

@@ -1,0 +1,92 @@
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 4px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: var(--fonte-padrao);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 12px;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.lang-btn.active {
+    color: var(--cor-primaria);
+    background-color: var(--white);
+}
+
+.lang-btn:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
+}
+
+.lang-divider {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.75rem;
+    line-height: 1;
+    user-select: none;
+}
+
+/* Desktop: mostra só o da nav, esconde o do header */
+.lang-switcher--mobile {
+    display: none;
+}
+
+.lang-switcher--desktop {
+    display: flex;
+}
+
+/* Mobile: mostra só o do header, esconde o da nav */
+@media (max-width: 800px) {
+    .lang-switcher--mobile {
+        display: flex;
+        padding: 3px 8px;
+    }
+
+    .lang-switcher--desktop {
+        display: none;
+    }
+
+    .lang-btn {
+        font-size: 0.75rem;
+        padding: 2px 4px;
+    }
+}
+
+body.alto-contraste .lang-switcher {
+    border-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+body.alto-contraste .lang-btn {
+    color: #000;
+}
+
+body.alto-contraste .lang-btn:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #000;
+}
+
+body.alto-contraste .lang-btn.active {
+    background-color: #000;
+    color: #ffff00;
+}

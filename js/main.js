@@ -42,44 +42,83 @@ document.getElementById("diminuir-fonte").addEventListener("click", () => {
   }
 });
 
-const btnContraste = document.getElementById("alto-contraste");
-btnContraste.addEventListener("click", () => {
-  document.body.classList.toggle("alto-contraste");
+// dark mode e controle de temas
+const btnTemaEscuro = document.getElementById("modo-escuro");
+const btnAltoContraste = document.getElementById("alto-contraste");
+const body = document.body;
 
-  const isContraste = document.body.classList.contains("alto-contraste");
+window.addEventListener("DOMContentLoaded", () => {
+  const contrasteSalvo = localStorage.getItem("alto-contraste");
+  const temaAtual = localStorage.getItem("tema");
+
+  const sistemaPedeEscuro = window.matchMedia(
+    "(prefers-color-scheme: dark)",
+  ).matches;
+
+  if (contrasteSalvo === "true") {
+    body.classList.add("alto-contraste");
+  } else if (temaAtual === "dark") {
+    body.classList.add("modo-escuro");
+  } else if (temaAtual === null && sistemaPedeEscuro) {
+    body.classList.add("modo-escuro");
+  }
+});
+
+btnAltoContraste.addEventListener("click", () => {
+  body.classList.toggle("alto-contraste");
+
+  if (body.classList.contains("alto-contraste")) {
+    body.classList.remove("modo-escuro");
+    localStorage.setItem("tema", "light");
+  }
+
+  const isContraste = body.classList.contains("alto-contraste");
   localStorage.setItem("alto-contraste", isContraste);
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-  const contrastSaved = localStorage.getItem("alto-contraste");
-  if (contrastSaved === "true") {
-    document.body.classList.add("alto-contraste");
+btnTemaEscuro.addEventListener("click", () => {
+  body.classList.toggle("modo-escuro");
+
+  if (body.classList.contains("modo-escuro")) {
+    body.classList.remove("alto-contraste");
+    localStorage.setItem("alto-contraste", "false");
+  }
+
+  if (body.classList.contains("modo-escuro")) {
+    localStorage.setItem("tema", "dark");
+  } else {
+    localStorage.setItem("tema", "light");
   }
 });
-const form = document.getElementById('form-contato');
-const btnWhatsapp = document.getElementById('btn-whatsapp');
+
+const form = document.getElementById("form-contato");
+const btnWhatsapp = document.getElementById("btn-whatsapp");
 
 // Mapeamento dos campos para facilitar a manutenção
 const camposConfig = [
-  { id: 'nome', erroId: 'error-nome', msg: 'Digite seu nome completo.' },
-  { id: 'email', erroId: 'error-email', msg: 'Informe um e-mail válido.' },
-  { id: 'mensagem', erroId: 'error-mensagem', msg: 'Escreva uma breve descrição.' }
+  { id: "nome", erroId: "error-nome", msg: "Digite seu nome completo." },
+  { id: "email", erroId: "error-email", msg: "Informe um e-mail válido." },
+  {
+    id: "mensagem",
+    erroId: "error-mensagem",
+    msg: "Escreva uma breve descrição.",
+  },
 ];
 
 // Função para limpar o erro de um campo específico
 function limparErro(input, erroSpan) {
-  input.classList.remove('input-error');
-  erroSpan.style.display = 'none';
-  erroSpan.textContent = '';
+  input.classList.remove("input-error");
+  erroSpan.style.display = "none";
+  erroSpan.textContent = "";
 }
 
-camposConfig.forEach(campo => {
+camposConfig.forEach((campo) => {
   const input = document.getElementById(campo.id);
   const erroSpan = document.getElementById(campo.erroId);
 
-  input.addEventListener('input', () => {
+  input.addEventListener("input", () => {
     if (input.value.trim() !== "") {
-      if (campo.id === 'email') {
+      if (campo.id === "email") {
         if (input.validity.valid) limparErro(input, erroSpan);
       } else {
         limparErro(input, erroSpan);
@@ -91,14 +130,17 @@ camposConfig.forEach(campo => {
 function validarFormulario() {
   let statusValido = true;
 
-  camposConfig.forEach(campo => {
+  camposConfig.forEach((campo) => {
     const input = document.getElementById(campo.id);
     const erroSpan = document.getElementById(campo.erroId);
 
-    if (!input.value.trim() || (campo.id === 'email' && !input.validity.valid)) {
-      input.classList.add('input-error');
+    if (
+      !input.value.trim() ||
+      (campo.id === "email" && !input.validity.valid)
+    ) {
+      input.classList.add("input-error");
       erroSpan.textContent = campo.msg;
-      erroSpan.style.display = 'block';
+      erroSpan.style.display = "block";
       statusValido = false;
     } else {
       limparErro(input, erroSpan);
@@ -108,31 +150,38 @@ function validarFormulario() {
   return statusValido;
 }
 
-form.addEventListener('submit', function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   if (validarFormulario()) {
-    const nome = document.getElementById('nome').value;
-    const mensagem = document.getElementById('mensagem').value;
+    const nome = document.getElementById("nome").value;
+    const mensagem = document.getElementById("mensagem").value;
     const emailDestino = "contato@iflowgroup.com";
 
-    const assunto = encodeURIComponent("Contato via Landing Page - IFlow Group");
-    const corpo = encodeURIComponent(`Olá, sou ${nome}.\n\nDescrição:\n${mensagem}`);
+    const assunto = encodeURIComponent(
+      "Contato via Landing Page - IFlow Group",
+    );
+    const corpo = encodeURIComponent(
+      `Olá, sou ${nome}.\n\nDescrição:\n${mensagem}`,
+    );
 
     window.location.href = `mailto:${emailDestino}?subject=${assunto}&body=${corpo}`;
     this.reset();
   }
 });
 
-btnWhatsapp.addEventListener('click', function() {
+btnWhatsapp.addEventListener("click", function () {
   if (validarFormulario()) {
-    const nome = document.getElementById('nome').value;
-    const mensagem = document.getElementById('mensagem').value;
+    const nome = document.getElementById("nome").value;
+    const mensagem = document.getElementById("mensagem").value;
     const numeroTelefone = "5500000000000";
 
     const texto = `Olá, sou ${nome}. ${mensagem}`;
     const msgCodificada = encodeURIComponent(texto);
 
-    window.open(`https://wa.me/${numeroTelefone}?text=${msgCodificada}`, '_blank');
+    window.open(
+      `https://wa.me/${numeroTelefone}?text=${msgCodificada}`,
+      "_blank",
+    );
   }
 });
 
@@ -162,36 +211,39 @@ let currentLang = localStorage.getItem("lang") || "pt";
 let translations = {};
 
 async function loadTranslations(lang) {
-    const res = await fetch(`./js/i18n/${lang}.json`);
-    return await res.json();
+  const res = await fetch(`./js/i18n/${lang}.json`);
+  return await res.json();
 }
 
 async function setLanguage(lang) {
-    translations = await loadTranslations(lang);
-    currentLang = lang;
-    localStorage.setItem("lang", lang);
+  translations = await loadTranslations(lang);
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
 
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[key]) el.textContent = translations[key];
-    });
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[key]) el.textContent = translations[key];
+  });
 
-    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-        const key = el.getAttribute("data-i18n-placeholder");
-        if (translations[key]) el.placeholder = translations[key];
-    });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (translations[key]) el.placeholder = translations[key];
+  });
 
-    document.documentElement.lang = lang;
-    loadFaq(lang);
-    loadMembros(lang);    langBtns.forEach(btn => {
-        const isActive = btn.getAttribute("data-lang") === lang;
-        btn.classList.toggle("active", isActive);
-        btn.setAttribute("aria-pressed", String(isActive));
-    });
+  document.documentElement.lang = lang;
+  loadFaq(lang);
+  loadMembros(lang);
+  langBtns.forEach((btn) => {
+    const isActive = btn.getAttribute("data-lang") === lang;
+    btn.classList.toggle("active", isActive);
+    btn.setAttribute("aria-pressed", String(isActive));
+  });
 }
 
-langBtns.forEach(btn => {
-    btn.addEventListener("click", () => setLanguage(btn.getAttribute("data-lang")));
+langBtns.forEach((btn) => {
+  btn.addEventListener("click", () =>
+    setLanguage(btn.getAttribute("data-lang")),
+  );
 });
 
 setLanguage(currentLang);
@@ -262,62 +314,57 @@ window.addEventListener("resize", updateCarousel);
 
 startAutoPlay();
 
-
-
-
 const faqContainer = document.getElementById("faq-container");
 
 function renderFaq(faqLista) {
-    faqContainer.innerHTML = "";
+  faqContainer.innerHTML = "";
 
-    faqLista.forEach(item => {
-        const details = document.createElement("details");
-        const summary = document.createElement("summary");
-        const p = document.createElement("p");
-        const img = document.createElement("img");
-        img.src = "assets/svg/caret-faq.svg";
-        img.alt = "seta para abrir pergunta";
-        img.classList.add("caret-faq-icon");
+  faqLista.forEach((item) => {
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");
+    const p = document.createElement("p");
+    const img = document.createElement("img");
+    img.src = "assets/svg/caret-faq.svg";
+    img.alt = "seta para abrir pergunta";
+    img.classList.add("caret-faq-icon");
 
-        summary.textContent = item.pergunta;
-        summary.append(img);
-        p.textContent = item.resposta;
+    summary.textContent = item.pergunta;
+    summary.append(img);
+    p.textContent = item.resposta;
 
-        details.append(summary);
-        details.append(p);
-        faqContainer.append(details);
-    });
+    details.append(summary);
+    details.append(p);
+    faqContainer.append(details);
+  });
 
-    document.querySelectorAll("details").forEach(details => {
-        details.addEventListener("toggle", () => {
-            if (details.open) {
-                document.querySelectorAll("details").forEach(outro => {
-                    if (details !== outro) outro.removeAttribute("open");
-                });
-            }
+  document.querySelectorAll("details").forEach((details) => {
+    details.addEventListener("toggle", () => {
+      if (details.open) {
+        document.querySelectorAll("details").forEach((outro) => {
+          if (details !== outro) outro.removeAttribute("open");
         });
+      }
     });
+  });
 }
 
 function loadFaq(lang) {
-    const arquivo = lang === "en" ? "json/faq-en.json" : "json/faq.json";
-    fetch(arquivo)
-        .then(res => res.json())
-        .then(renderFaq);
+  const arquivo = lang === "en" ? "json/faq-en.json" : "json/faq.json";
+  fetch(arquivo)
+    .then((res) => res.json())
+    .then(renderFaq);
 }
 
 loadFaq(currentLang);
 
-
-
 const quemSomos = document.querySelector(".container-membros");
 
 function loadMembros(lang) {
-    fetch("./json/membros.json")
-        .then(resposta => resposta.json())
-        .then(membrosLista => {
-            quemSomos.innerHTML = "";
-            membrosLista.forEach(item => {
+  fetch("./json/membros.json")
+    .then((resposta) => resposta.json())
+    .then((membrosLista) => {
+      quemSomos.innerHTML = "";
+      membrosLista.forEach((item) => {
         const nomeMembro = document.createElement("h1");
         const cargo = document.createElement("p");
         const descricaoCargo = document.createElement("h3");
@@ -330,7 +377,6 @@ function loadMembros(lang) {
         const iconeLinkedin = document.createElement("img");
         const contatoPessoal = document.createElement("div");
 
-
         membroUnico.classList.add("membro-unico-container");
 
         contatoPessoal.classList.add("contato-pessoal");
@@ -339,25 +385,22 @@ function loadMembros(lang) {
         foto.alt = item.descricaoFoto;
         foto.classList.add("foto-membro");
 
-
         iconeGit.src = "assets/svg/github.svg";
-        iconeGit.alt = "ícone do GitHub"
+        iconeGit.alt = "ícone do GitHub";
 
         iconeLinkedin.src = "assets/svg/linkedin.svg";
         iconeLinkedin.alt = "ícone do LinkedIn";
 
-
-
         nomeMembro.textContent = item.nome;
-                cargo.textContent = lang === "en" && item.cargo_en ? item.cargo_en : item.cargo;
+        cargo.textContent =
+          lang === "en" && item.cargo_en ? item.cargo_en : item.cargo;
         descricaoCargo.textContent = item.descricaoCargo;
 
         botaoGit.href = item.linkGit;
         botaoGit.target = "_blank";
 
-        botaoLinkedin.href = item.botaoLinkedin
+        botaoLinkedin.href = item.botaoLinkedin;
         botaoLinkedin.target = "_blank";
-
 
         botaoLinkedin.appendChild(iconeLinkedin);
         botaoGit.appendChild(iconeGit);
@@ -370,9 +413,20 @@ function loadMembros(lang) {
         membroUnico.appendChild(descricaoCargo);
         membroUnico.appendChild(contatoPessoal);
 
-                quemSomos.appendChild(membroUnico);
-            });
-        });
+        quemSomos.appendChild(membroUnico);
+      });
+    });
 }
 
 loadMembros(currentLang);
+
+const menuAcessibilidade = document.getElementById("menu-acessibilidade");
+const btnToggleAcessibilidade = document.getElementById(
+  "btn-toggle-acessibilidade",
+);
+
+if (btnToggleAcessibilidade && menuAcessibilidade) {
+  btnToggleAcessibilidade.addEventListener("click", () => {
+    menuAcessibilidade.classList.toggle("aberta");
+  });
+}
